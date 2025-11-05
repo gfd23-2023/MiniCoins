@@ -46,7 +46,7 @@ class blockchain:
 
 ```
 
-A classe `MiiCoins` tem os métodos que manipulam as movimentações financeiras, enquanto isso, a classe `blockchain` tem os métodos que tratam a lista.
+A classe `MiniCoins` tem os métodos que manipulam as movimentações financeiras, enquanto isso, a classe `blockchain` tem os métodos que tratam a lista.
 
 **Métodos:**
 - Classe `MiniCoins`: `criar_movimentacao`, `gerar_hash`, `retornar_hash`
