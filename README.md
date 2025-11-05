@@ -14,7 +14,7 @@
 1. Início da implementação
 2.  
 
-## 0. Preparando o Ambiente
+## 0. Preparando o Ambiente 🤖
 Para que o código funcione como esperado, execute os seguintes comandos:
 ```
 pip install dataclasses
