@@ -21,7 +21,35 @@ pip install dataclasses
 
 ```
 
-## 1. Início da Implementação  
+## 1. Início da Implementação 🌐
 Após a escolha da linguagem, foi dado início ao desenvolvimento do trabalho que se deu pela implementação da lista ligada - base da blockchain - e da estrutura cliente-servidor. Enquanto isso, foi possível pesquisar e entender mais sobre a definição de `blockchains` e como utilizar o `hash`.
 
 **Importante**: É preciso garantir que o computador tenha instalado uma versão superior ou igual a 3.7 do python ou, pelo menos, que tenha a biblioteca `dataclasses` instalada. Por garantia, executar `pip install dataclasses`.
+
+O desenvolvimento do trabalho teve por início a implementação da lista ligada que representa a Blockchain. Para isso, foram definidas duas classes: `MiniCoins` e `blockchain`.
+
+```Python
+@dataclass
+class MiniCoin:
+    movimentacao: int = 0               #Valor da movimentação
+    proprietario: str = None            #Dono da movimentação
+    hash_anterior: str = None           #Hash em string - menor e mais legível
+    hash_atual: str = None              #Hash em string - menor e mais legível
+    criado_em: str = None               #Criação da minicoin - data e horário
+    prox: Optional["MiniCoin"] = None   #Próxima movimentação - as aspas permitem autorreferência
+    deposito_inicial: int = 0           #Primeiro depósito
+
+@dataclass
+class blockchain:
+    head: Optional["MiniCoin"] = None   #Referência para o primeiro elemento da blockchain
+    numero_blocos: int = 0              #Número de movimentações
+
+```
+
+A classe `MiiCoins` tem os métodos que manipulam as movimentações financeiras, enquanto isso, a classe `blockchain` tem os métodos que tratam a lista.
+
+**Métodos:**
+- Classe `MiniCoins`: `criar_movimentacao`, `gerar_hash`, `retornar_hash`
+- Classe `blockchain`: `numero_movimentacoes`, `inserir_bloco`, `imprime`
+
+Dado o contexto de uma blockchain, não havia sentido em implementar uma função de `remover_bloco`, pois o objetivo da lista é manter um registro de todas as movimentações do usuário.
