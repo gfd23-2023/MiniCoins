@@ -71,6 +71,7 @@ class MiniCoin:
             self.hash_anterior = hash_anterior
 
         self.hash_atual = self.gerar_hash()     #chama o método para a instância atual
+        self.prox = None                        #seta a referência do próximo bloco para nulo
 
 
 
@@ -100,7 +101,7 @@ class blockchain:
         #Caminha até a última posição
         ultimo_bloco = self.head
         while (ultimo_bloco.prox != None):
-            ultimo_bloco = self.head.prox
+            ultimo_bloco = ultimo_bloco.prox
 
         ultimo_bloco.prox = bloco
 
@@ -109,14 +110,15 @@ class blockchain:
 
         return
 
-#Função para imprimir a blockchain
-def imprime_blockchain(bc: blockchain):
+    #Função para imprimir a blockchain
+    def imprime(self):
 
-    #Cabeça da lista
-    print('#')
+        #Moedas
+        bloco = self.head
 
-    #Moedas
-    bloco = bc.head
+        print('Blockchain:')
+        while bloco is not None:
+            print('Proprietário: ', {bloco.proprietario})
+            print('Movimentação: ', {bloco.movimentacao})
 
-    while (bloco.prox):
-        print('-')
+            bloco = bloco.prox
