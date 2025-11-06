@@ -19,8 +19,21 @@ port = 2623 # define a porta
 sock.connect(('localhost', port)) # conecta ao servidor
 logger.info(f"Conectado ao servidor na porta {port}.")
 
-message = "oii servidor! aqui eh o cliente :)" # mensagem a ser enviada
-sock.send(message.encode()) # envia a mensagem (a função encode() converte string para bytes)
-logger.info(f"Mensagem enviada: {message}")
+conexao = True
+while conexao:
+
+    mensagem = sock.recv(1024) # recebe os dados do servidor (até 1024 bytes)
+    if not mensagem:
+        conexao = False
+        break
+
+    print(mensagem.decode()) # exibe a mensagem recebida do servidor
+    logger.info(f"Dados recebidos do servidor: {mensagem.decode()}") # a função decode() converte bytes para string
+
+    user_input = input("➤ ")  # lê a entrada do usuário
+    sock.send(user_input.encode())  # envia a entrada do usuário ao servidor
+    logger.info(f"Dados enviados ao servidor: {user_input}")
+
+
 sock.close() # fecha o socket
 logger.info("Socket fechado.")
