@@ -32,8 +32,8 @@ O desenvolvimento do trabalho teve por início a implementação da lista ligada
 @dataclass
 class MiniCoin:
     movimentacao: int = 0               #Valor da movimentação
+    movmentacao_tipo: str = None        #Tipo da movimentação: Depósito / Saque
     proprietario: str = None            #Dono da movimentação
-    hash_anterior: str = None           #Hash em string - menor e mais legível
     hash_atual: str = None              #Hash em string - menor e mais legível
     criado_em: str = None               #Criação da minicoin - data e horário
     prox: Optional["MiniCoin"] = None   #Próxima movimentação - as aspas permitem autorreferência
@@ -53,3 +53,5 @@ A classe `MiniCoins` tem os métodos que manipulam as movimentações financeira
 - Classe `blockchain`: `numero_movimentacoes`, `inserir_bloco`, `imprime`
 
 Dado o contexto de uma blockchain, não havia sentido em implementar uma função de `remover_bloco`, pois o objetivo da lista é manter um registro de todas as movimentações do usuário.
+
+A primeira organização do código foi guardar as classes mencionadas em um primeiro arquivo chamado `lista.py`, porém, depois de conversas, foi chego à conclusão de que seria melhor isolar as classes em arquivos separados.
