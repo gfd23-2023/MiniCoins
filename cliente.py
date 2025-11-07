@@ -16,7 +16,7 @@ sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # cria o socket TCP
 logger.info("Socket criado com sucesso.")
 port = 2623 # define a porta
 
-sock.connect(('localhost', port)) # conecta ao servidor
+sock.connect(('10.254.237.4', port)) # conecta ao servidor
 logger.info(f"Conectado ao servidor na porta {port}.")
 
 conexao = True
@@ -24,6 +24,9 @@ while conexao:
 
     mensagem = sock.recv(1024) # recebe os dados do servidor (até 1024 bytes)
     if not mensagem:
+        conexao = False
+        break
+    if mensagem.decode() == "Saindo do banco. Até logo!":
         conexao = False
         break
 

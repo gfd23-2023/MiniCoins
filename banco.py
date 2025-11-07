@@ -13,7 +13,7 @@ class Banco:
         return mensagem
     
     def menu(self):
-        mensagem = "\n💰 Escolha uma das opções abaixo:\n\t1 - Ver saldo\n\t2 - Depositar Minicoins\n\t3 - Sacar Minicoins\n\t4 - Sair\n"
+        mensagem = "\n💰 Escolha uma das opções abaixo:\n\t1 - Ver saldo\n\t2 - Depositar Minicoins\n\t3 - Sacar Minicoins\n\t4 - Sair\n\n"
         return mensagem
 
     def cria_conta(self):
@@ -21,18 +21,34 @@ class Banco:
         return mensagem
 
     def conexao(self):
-        mensagem = "\n🔌 Um cliente se conectou ao Banco Central das Minicoins!\n"
+        mensagem = "🔌 Um cliente se conectou ao Banco Central das Minicoins!\n"
         return mensagem
 
     def encerra_conexao(self):
-        mensagem = "\n🔌 Conexão do cliente encerrada.\n"
+        mensagem = "🔌 Conexão do cliente encerrada.\n"
         return mensagem
 
     def criou_conta(self):
-        mensagem = "\n✅ Conta do cliente criada com sucesso!\n"
+        mensagem = "✅ Conta do cliente criada com sucesso!\n"
         return mensagem
 
     def nao_criou_conta(self):
-        mensagem = "\n❌ O cliente optou por não criar uma conta.\n"
+        mensagem = "❌ O cliente optou por não criar uma conta.\n"
+        return mensagem
+
+    def viu_saldo(self):
+        mensagem = "💰 Cliente viu seu saldo com sucesso!\n"
         return mensagem
     
+    def fez_deposito(self):
+        mensagem = "💸 Cliente fez um depósito com sucesso!\n"
+        return mensagem
+    
+    def fez_saque(self):
+        mensagem = "🏧 Cliente fez um saque com sucesso!\n"
+        return mensagem
+    
+    def opcao_invalida(self):
+        mensagem = "⚠️ Cliente escolheu uma opção inválida no menu.\n"
+        return mensagem
+
