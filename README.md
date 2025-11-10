@@ -60,4 +60,4 @@ A primeira organização do código foi guardar as classes mencionadas em um pri
 **Pequenos Problemas de Implementação**
 Durante os testes, alguns problemas de implementação surgiram:
 1. O Depósito Inicial era alterado a cada movimentação. A solução foi criar um método na classe `Blockchain` chamado `deposito_inicial` que retorna o depósito inicial registrado na primeira operação. 
-2. A validação da `hash` não funcionava. O problema era extremamente simples, o código não armazenava o retorno do cálculo do hash.
+2. A validação utilizando as funções `hash` não funcionava. O problema era extremamente simples, o código não armazenava o retorno do cálculo do hash.
