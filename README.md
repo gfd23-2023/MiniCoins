@@ -38,6 +38,7 @@ class MiniCoin:
     criado_em: str = None               #Criação da minicoin - data e horário
     prox: Optional["MiniCoin"] = None   #Próxima movimentação - as aspas permitem autorreferência
     deposito_inicial: int = 0           #Primeiro depósito
+    saldo: int = 0                      #Saldo atual do usuário
 
 @dataclass
 class blockchain:
@@ -49,9 +50,14 @@ class blockchain:
 A classe `MiniCoins` tem os métodos que manipulam as movimentações financeiras, enquanto isso, a classe `blockchain` tem os métodos que tratam a lista.
 
 **Métodos:**
-- Classe `MiniCoins`: `criar_movimentacao`, `gerar_hash`, `retornar_hash`
-- Classe `blockchain`: `numero_movimentacoes`, `inserir_bloco`, `imprime`
+- Classe `MiniCoins`: `criar_movimentacao`, `gerar_hash`, `retornar_hash`.
+- Classe `blockchain`: `numero_movimentacoes`, `inserir_bloco`, `imprime`, `valida`, `deposito_inicial`, `ultimo_hash`.
 
 Dado o contexto de uma blockchain, não havia sentido em implementar uma função de `remover_bloco`, pois o objetivo da lista é manter um registro de todas as movimentações do usuário.
 
-A primeira organização do código foi guardar as classes mencionadas em um primeiro arquivo chamado `lista.py`, porém, depois de conversas, foi chego à conclusão de que seria melhor isolar as classes em arquivos separados.
+A primeira organização do código foi guardar as classes mencionadas em um primeiro arquivo chamado `lista.py`, porém, depois de conversas, foi chego à conclusão de que seria melhor isolar as classes em arquivos separados, sem a necessidade de uma pasta.
+
+**Pequenos Problemas de Implementação**
+Durante os testes, alguns problemas de implementação surgiram:
+1. O Depósito Inicial era alterado a cada movimentação. A solução foi criar um método na classe `Blockchain` chamado `deposito_inicial` que retorna o depósito inicial registrado na primeira operação. 
+2. A validação da `hash` não funcionava. O problema era extremamente simples, o código não armazenava o retorno do cálculo do hash.
