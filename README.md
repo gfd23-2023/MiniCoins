@@ -15,7 +15,7 @@
 2.  
 
 ## 0. Preparando o Ambiente 🤖
-Para que o código funcione como esperado, execute os seguintes comandos:
+Para que o código funcione como esperado, execute o seguinte comando:
 ```
 pip install dataclasses
 
