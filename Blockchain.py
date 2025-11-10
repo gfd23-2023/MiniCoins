@@ -13,7 +13,6 @@ class blockchain:
 
     def valida(self):
 
-        print('Entrei na função de validar')        
         #Valida a blockchain inteira
         bloco = self.head
 
@@ -23,9 +22,9 @@ class blockchain:
 
         #Recalcula o hash do primeiro bloco - O HASH ANTERIORO DO PRIMEIRO BLOCO VAI SER ZERO
         hash_original = bloco.retornar_hash()
-        bloco.gerar_hash(0)
+        hash_atual = bloco.gerar_hash(0)
 
-        if hash_original != bloco.retornar_hash():
+        if hash_original != hash_atual:
             print('⛓️‍💥 Houve violação na Blockchain no bloco 1!!!')
             return None
 
@@ -42,9 +41,9 @@ class blockchain:
         while bloco.prox is not None:
             #print(bloco)
             hash_original = bloco.retornar_hash()   #pega o hash do bloco atual
-            bloco.gerar_hash(hash_anterior)         #recalcula o hash do bloco atual com o hash do bloco anterior
+            hash_atual = bloco.gerar_hash(hash_anterior)         #recalcula o hash do bloco atual com o hash do bloco anterior
             
-            if hash_original != bloco.hash_atual:
+            if hash_original != hash_atual:
                 print(f'⛓️‍💥 Houve violação na Blockchain no bloco {i} !!!')
                 return 0
 
@@ -75,12 +74,14 @@ class blockchain:
         #Valida a blockchain para verificar a posibilidade de inserção
         ultimo_bloco = self.valida()
 
+        if (ultimo_bloco == 0):
+            return 0
+
         #print(ultimo_bloco)
         print('Inserindo o novo bloco')
-        if ultimo_bloco is not None:
-            ultimo_bloco.prox = bloco
-            bloco.prox = None
-            self.numero_blocos += 1
+        ultimo_bloco.prox = bloco
+        bloco.prox = None
+        self.numero_blocos += 1
 
         return 1
 
@@ -100,19 +101,8 @@ class blockchain:
         return bloco.hash_atual
 
     def deposito_inicial(self):
-        #Percorre a blockchain até o último bloco inserido e retorna o depósito inicial
-        bloco = self.head
-
-        if self.numero_blocos == 0:
-            print("Nenhuma Movimentação")
-            return
-
-        while bloco.prox is not None:
-            print(bloco.deposito_inicial)
-            bloco = bloco.prox
-
-        #Retorna uma referência para o último bloco.
-        return bloco.deposito_inicial
+        #Retorna uma referência para o depósito inicial do primeiro bloco.
+        return self.head.deposito_inicial
 
     #Função para imprimir a blockchain
     def imprime(self):
@@ -133,6 +123,7 @@ class blockchain:
             print('Movimentação: ', {bloco.movimentacao})
             print('Depósito Inicial: ', {bloco.deposito_inicial})
             print('Tipo da Movimentação: ', {bloco.movimentacao_tipo})
+            print('Saldo Atual: ', {bloco.saldo})
             print('==========================')
             i += 1
 

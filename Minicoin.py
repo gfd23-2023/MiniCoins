@@ -18,6 +18,7 @@ class MiniCoin:
     criado_em: str = None               #Criação da minicoin - data e horário
     prox: Optional["MiniCoin"] = None   #Próxima movimentação - as aspas permitem autorreferência
     deposito_inicial: int = 0           #Primeiro depósito
+    saldo: int = 0
     
     #Métodos
 
@@ -37,14 +38,7 @@ class MiniCoin:
 
     def criar_movimentacao(self, valor: int, dono: str, qtd_movimentacoes: int, depositoInicial: int, hash_anterior: str):
         
-        print('Entrei na criação da movimentação')
-
-        #Caso seja a primeira movimentação:
-#        if (depositoInicial == 0):
-#            self.deposito_inicial = valor
-            #print('por que raios eu entrei nesse if??')
-#        elif depositoInicial != 0:
-#            self.deposito_inical = depositoInicial
+        #print('Entrei na criação da movimentação')
 
         self.deposito_inicial = depositoInicial
         self.proprietario = dono
@@ -52,15 +46,17 @@ class MiniCoin:
         self.criado_em = datetime.today().isoformat        #retorna ano-mês-dia hora-minuto-segundo-milissegundo em formato legível
         self.hash_atual = self.gerar_hash(hash_anterior)   #chama o método para a instância atual
         self.prox = None                                   #seta a referência do próximo bloco para nulo
-
-        #print(f"Depósito Inicial no método de criar movimentação: {self.deposito_inicial}")
+        
+        self.saldo = self.deposito_inicial + valor
 
         #Tipo da movimentação
         if (valor > 0):
             self.movimentacao_tipo = 'Depósito'
         elif (valor < 0):
             self.movimentacao_tipo = 'Saque'
+        elif (valor == 0):
+            self.movimentacao_tipo = 'Primeiro Depósito'
         else:
             self.movimentacao_tipo = 'Inválido'
 
-        print('terminei a criação da movimentação')
+        #print('terminei a criação da movimentação')
