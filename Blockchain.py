@@ -64,11 +64,14 @@ class blockchain:
             print("Nenhum saldo.")
             return
 
-        while bloco.prox is not None:
+        saldo = bloco.deposito_inicial
+        while bloco is not None:
+            saldo = saldo + bloco.movimentacao
+            bloco.saldo = saldo
             bloco = bloco.prox
 
         #Retorna uma referência para o último bloco.
-        return bloco.saldo
+        return saldo
 
     def retorna_proprietario(self):
         return self.head.proprietario
@@ -91,10 +94,9 @@ class blockchain:
         #Valida a blockchain para verificar a posibilidade de inserção
         ultimo_bloco = self.valida()
 
-        if (ultimo_bloco == 0):
+        if (ultimo_bloco is None):
             return 0
 
-        #print(ultimo_bloco)
         print('Inserindo o novo bloco')
         ultimo_bloco.prox = bloco
         bloco.prox = None
@@ -140,7 +142,7 @@ class blockchain:
             print('Movimentação: ', {bloco.movimentacao})
             print('Depósito Inicial: ', {bloco.deposito_inicial})
             print('Tipo da Movimentação: ', {bloco.movimentacao_tipo})
-            print('Saldo Atual: ', {bloco.saldo})
+            print('Saldo Atual: ', {self.retorna_saldo()})
             print('==========================')
             i += 1
 

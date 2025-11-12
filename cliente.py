@@ -16,7 +16,7 @@ sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # cria o socket TCP
 logger.info("Socket criado com sucesso.")
 port = 2623 # define a porta
 
-sock.connect(('192.168.100.5', port)) # conecta ao servidor
+sock.connect(('10.254.221.73', port)) # conecta ao servidor
 logger.info(f"Conectado ao servidor na porta {port}.")
 
 conexao = True
