@@ -56,6 +56,23 @@ class blockchain:
         #Retorna uma referência para o último bloco
         return bloco
 
+    def retorna_saldo(self):
+        #Percorre a blockchain até chegar no último bloco inserido e retorna o saldo
+        bloco = self.head
+
+        if self.numero_blocos == 0:
+            print("Nenhum saldo.")
+            return
+
+        while bloco.prox is not None:
+            bloco = bloco.prox
+
+        #Retorna uma referência para o último bloco.
+        return bloco.saldo
+
+    def retorna_proprietario(self):
+        return self.head.proprietario
+
     #Insere um bloco na blockchain - sempre no final
     #Mudar
     def inserir_bloco(self, bloco: MiniCoin):

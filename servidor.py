@@ -2,6 +2,8 @@ import socket # importa a biblioteca de sockets
 import sys 
 import logging # importa a biblioteca para criar logs
 from banco import Banco 
+from Minicoin import MiniCoin
+from Blockchain import blockchain
 
 
 # configurações do log
@@ -20,13 +22,15 @@ port = 2623 # define a porta
 
 # vincula o socket à porta 
 # usamos o endereço de loopback (maquina local)
-sock.bind(('10.254.237.4', port))
+sock.bind(('192.168.100.5', port))
 logger.info(f"Socket vinculado à porta {port}.") 
 
 banco = Banco()  # cria uma instância do Banco
 logger.info("Instância do Banco criada com sucesso.")
 
 
+#Cria a blockchain
+bc = blockchain()
 
 while True:
     sock.listen() # coloca o socket em modo de escuta
@@ -58,7 +62,7 @@ while True:
             logger.info(f"Escolha do cliente: {escolha}")
 
             if escolha == '1':
-                resposta = "Seu saldo é de 100 Minicoins."
+                resposta = f"Seu saldo é de {bc.retorna_saldo()} Minicoins."
                 conn.send(resposta.encode()+banco.menu().encode())
                 logger.info("Enviado saldo ao cliente.")
                 print(banco.viu_saldo())

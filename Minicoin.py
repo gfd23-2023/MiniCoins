@@ -2,6 +2,7 @@ from dataclasses import dataclass           #dataclass é menos verboso do que c
 from datetime import datetime               #para o momento de criação da minicoin
 from typing import Optional                 #pois o próximo elemento pode existir ou pode ser nulo
 import hashlib
+from Blockchain import blockchain
 
 #@dataclass transforma uma classe simples em uma estrutura de dados completa com:
 #um método __init__ -> criar instâncias
@@ -36,7 +37,7 @@ class MiniCoin:
     def retornar_hash(self):
         return self.hash_atual
 
-    def criar_movimentacao(self, valor: int, dono: str, qtd_movimentacoes: int, depositoInicial: int, hash_anterior: str):
+    def criar_movimentacao(self, valor: int, dono: str, qtd_movimentacoes: int, depositoInicial: int, hash_anterior: str, bc: blockchain):
         
         #print('Entrei na criação da movimentação')
 
@@ -47,7 +48,10 @@ class MiniCoin:
         self.hash_atual = self.gerar_hash(hash_anterior)   #chama o método para a instância atual
         self.prox = None                                   #seta a referência do próximo bloco para nulo
         
-        self.saldo = self.deposito_inicial + valor
+        if qtd_movimentacoes == 0:
+            self.saldo = depositoInicial
+        else:
+            self.saldo = bc.retorna_saldo() + valor
 
         #Tipo da movimentação
         if (valor > 0):
