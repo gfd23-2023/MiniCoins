@@ -22,7 +22,8 @@ port = 2623 # define a porta
 
 # vincula o socket à porta 
 # usamos o endereço de loopback (maquina local)
-sock.bind(('10.254.221.73', port))
+#sock.bind(('10.254.221.73', port)) #ufpr
+sock.bind(('192.168.100.5', port))  #casa
 logger.info(f"Socket vinculado à porta {port}.") 
 
 banco = Banco()  # cria uma instância do Banco
@@ -94,10 +95,22 @@ while True:
                 logger.info("Confirmação de depósito enviada ao cliente.")
                 print(banco.fez_deposito())
             elif escolha == '3':
-                resposta = "Saque realizado com sucesso."
-                conn.send(resposta.encode()+banco.menu().encode())
-                logger.info("Confirmação de saque enviada ao cliente.")
-                print(banco.fez_saque())
+                mensagem = "Digite o valor que deseja retirar: "
+                conn.send(mensagem.encode())
+                data2 = conn.recv(1024)
+                movimentacao = data2.decode()
+
+                if int(movimentacao) > bc.retorna_saldo():
+                    resposta = "Saldo insuficiente!"
+                    conn.send(resposta.encode())
+                else:
+                    novo_bloco = MiniCoin()
+                    novo_bloco.criar_movimentacao(-int(movimentacao), nome, bc.numero_movimentacoes(), bc.deposito_inicial(), bc.ultimo_hash())
+                    bc.inserir_bloco(novo_bloco)
+                    resposta = "Saque realizado com sucesso."
+                    conn.send(resposta.encode()+banco.menu().encode())
+                    logger.info("Confirmação de saque enviada ao cliente.")
+                    print(banco.fez_saque())
             elif escolha == '4':
                 resposta = "Saindo do banco. Até logo!"
                 conn.send(resposta.encode())
