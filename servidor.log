@@ -1,0 +1,18 @@
+2025-11-12 18:11:11,502 - INFO - Iniciando o servidor...
+2025-11-12 18:11:11,502 - INFO - Socket criado com sucesso.
+2025-11-12 18:11:11,502 - INFO - Socket vinculado à porta 2623.
+2025-11-12 18:11:11,502 - INFO - Instância do Banco criada com sucesso.
+2025-11-12 18:11:11,502 - INFO - Socket agora está em modo de escuta.
+2025-11-12 18:11:13,677 - INFO - Conexão aceita de ('192.168.100.5', 39232).
+2025-11-12 18:11:15,765 - INFO - Dados recebidos do cliente: s
+2025-11-12 18:11:15,765 - INFO - Cliente optou por criar uma conta.
+2025-11-12 18:11:18,106 - INFO - Menu enviado ao cliente.
+2025-11-12 18:11:20,028 - INFO - Escolha do cliente: 2
+2025-11-12 18:11:22,118 - INFO - Confirmação de depósito enviada ao cliente.
+2025-11-12 18:11:23,764 - INFO - Escolha do cliente: 3
+2025-11-12 18:11:25,997 - INFO - Confirmação de saque enviada ao cliente.
+2025-11-12 18:11:29,199 - INFO - Escolha do cliente: 1
+2025-11-12 18:11:29,199 - INFO - Enviado saldo ao cliente.
+2025-11-12 18:11:30,925 - INFO - Escolha do cliente: 
+2025-11-12 18:11:30,925 - INFO - Enviado aviso de opção inválida ao cliente.
+2025-11-12 18:11:30,925 - INFO - Escolha do cliente: 

@@ -1,0 +1,52 @@
+2025-11-12 18:11:13,676 - INFO - Iniciando o cliente...
+2025-11-12 18:11:13,676 - INFO - Socket criado com sucesso.
+2025-11-12 18:11:13,677 - INFO - Conectado ao servidor na porta 2623.
+2025-11-12 18:11:13,677 - INFO - Dados recebidos do servidor: 
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+💸 BEM VINDO AO BANCO CENTRAL DAS MINICOINS! 💸
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+
+🏦 Deseja criar uma conta no Banco Central das Minicoins? (S/N)
+💡 Obs: Você precisa ter uma conta para realizar transações.
+2025-11-12 18:11:15,765 - INFO - Dados enviados ao servidor: s
+2025-11-12 18:11:15,765 - INFO - Dados recebidos do servidor: Digite seu nome: 
+2025-11-12 18:11:18,106 - INFO - Dados enviados ao servidor: Giovanna
+2025-11-12 18:11:18,107 - INFO - Dados recebidos do servidor: 
+💰 Escolha uma das opções abaixo:
+	1 - Ver saldo
+	2 - Depositar Minicoins
+	3 - Sacar Minicoins
+	4 - Sair
+
+
+2025-11-12 18:11:20,028 - INFO - Dados enviados ao servidor: 2
+2025-11-12 18:11:20,029 - INFO - Dados recebidos do servidor: Digite o valor que deseja depositar: 
+2025-11-12 18:11:22,118 - INFO - Dados enviados ao servidor: 500
+2025-11-12 18:11:22,118 - INFO - Dados recebidos do servidor: Depósito realizado com sucesso.
+💰 Escolha uma das opções abaixo:
+	1 - Ver saldo
+	2 - Depositar Minicoins
+	3 - Sacar Minicoins
+	4 - Sair
+
+
+2025-11-12 18:11:23,764 - INFO - Dados enviados ao servidor: 3
+2025-11-12 18:11:23,765 - INFO - Dados recebidos do servidor: Digite o valor que deseja retirar: 
+2025-11-12 18:11:25,997 - INFO - Dados enviados ao servidor: 50
+2025-11-12 18:11:25,997 - INFO - Dados recebidos do servidor: Saque realizado com sucesso.
+💰 Escolha uma das opções abaixo:
+	1 - Ver saldo
+	2 - Depositar Minicoins
+	3 - Sacar Minicoins
+	4 - Sair
+
+
+2025-11-12 18:11:29,199 - INFO - Dados enviados ao servidor: 1
+2025-11-12 18:11:29,199 - INFO - Dados recebidos do servidor: Seu saldo é de 450 Minicoins.
+💰 Escolha uma das opções abaixo:
+	1 - Ver saldo
+	2 - Depositar Minicoins
+	3 - Sacar Minicoins
+	4 - Sair
+
+

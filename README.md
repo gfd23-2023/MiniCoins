@@ -94,3 +94,7 @@ O programa `cliente.py` funciona da seguinte maneira:
 4. Ele envia essa resposta ao servidor e volta a esperar um retorno do servidor.
 
 *Todas as mensagens recebidas são impressas para o usuário poder tomar alguma ação.*
+
+## 3. Chamadas Cliente-Servidor-Blockchain
+
+No momento de juntar o cliente-servidor com o serviço da blockchain foi necessário implementar funções que solicitassem a ação desejada pelo cliente. 

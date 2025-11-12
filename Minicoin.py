@@ -37,17 +37,19 @@ class MiniCoin:
         return self.hash_atual
 
     def criar_movimentacao(self, valor: int, dono: str, qtd_movimentacoes: int, depositoInicial: int, hash_anterior: str):
-        
         #print('Entrei na criação da movimentação')
 
-        self.deposito_inicial = depositoInicial
+        self.deposito_inicial = int(depositoInicial)
         self.proprietario = dono
-        self.movimentacao = valor                          #mesmo valor, pois o depósito inicial também é uma movimentação
-        self.criado_em = datetime.today().isoformat        #retorna ano-mês-dia hora-minuto-segundo-milissegundo em formato legível
+        self.movimentacao = int(valor)                     #mesmo valor, pois o depósito inicial também é uma movimentação
+        self.criado_em = datetime.today().isoformat()      #retorna ano-mês-dia hora-minuto-segundo-milissegundo em formato legível
         self.hash_atual = self.gerar_hash(hash_anterior)   #chama o método para a instância atual
         self.prox = None                                   #seta a referência do próximo bloco para nulo
         
-        self.saldo = self.deposito_inicial + valor
+        #if qtd_movimentacoes == 0:
+        #    self.saldo = depositoInicial
+        #else:
+        #    self.saldo = bc.retorna_saldo() + valor
 
         #Tipo da movimentação
         if (valor > 0):
