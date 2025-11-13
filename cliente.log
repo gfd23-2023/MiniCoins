@@ -1,17 +1,17 @@
-2025-11-13 11:24:57,914 - INFO - Iniciando o cliente...
-2025-11-13 11:24:57,914 - INFO - Socket criado com sucesso.
-2025-11-13 11:24:57,914 - INFO - Conectado ao servidor na porta 2622.
-2025-11-13 11:24:57,915 - INFO - Dados recebidos do servidor: 
+2025-11-13 15:34:18,849 - INFO - Iniciando o cliente...
+2025-11-13 15:34:18,850 - INFO - Socket criado com sucesso.
+2025-11-13 15:34:18,850 - INFO - Conectado ao servidor na porta 2623.
+2025-11-13 15:34:18,850 - INFO - Dados recebidos do servidor: 
 ⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
 💸 BEM VINDO AO BANCO CENTRAL DAS MINICOINS! 💸
 ⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
 
 🏦 Deseja criar uma conta no Banco Central das Minicoins? (S/N)
 💡 Obs: Você precisa ter uma conta para realizar transações.
-2025-11-13 11:25:05,122 - INFO - Dados enviados ao servidor: s
-2025-11-13 11:25:05,122 - INFO - Dados recebidos do servidor: Digite seu nome: 
-2025-11-13 11:25:06,858 - INFO - Dados enviados ao servidor: nadia
-2025-11-13 11:25:06,858 - INFO - Dados recebidos do servidor: 
+2025-11-13 15:34:20,235 - INFO - Dados enviados ao servidor: s
+2025-11-13 15:34:20,236 - INFO - Dados recebidos do servidor: Digite seu nome: 
+2025-11-13 15:34:22,779 - INFO - Dados enviados ao servidor: james
+2025-11-13 15:34:22,779 - INFO - Dados recebidos do servidor: 
 💰 Escolha uma das opções abaixo:
 	1 - Ver saldo
 	2 - Depositar Minicoins
@@ -19,11 +19,8 @@
 	4 - Sair
 
 
-2025-11-13 11:25:30,483 - INFO - Dados enviados ao servidor: 2
-2025-11-13 11:25:30,484 - INFO - Dados recebidos do servidor: 🏧 Digite o valor de MiniCoins que deseja depositar: 
-2025-11-13 11:25:32,596 - INFO - Dados enviados ao servidor: 5
-2025-11-13 11:25:32,596 - INFO - Dados recebidos do servidor: 🏧✅ Depósito realizado com sucesso!
-
+2025-11-13 15:34:27,515 - INFO - Dados enviados ao servidor: 1
+2025-11-13 15:34:27,516 - INFO - Dados recebidos do servidor: 🪙 Seu saldo é de None Minicoins.
 💰 Escolha uma das opções abaixo:
 	1 - Ver saldo
 	2 - Depositar Minicoins
@@ -31,22 +28,10 @@
 	4 - Sair
 
 
-2025-11-13 11:25:38,868 - INFO - Dados enviados ao servidor: 2
-2025-11-13 11:25:38,868 - INFO - Dados recebidos do servidor: 🏧 Digite o valor de MiniCoins que deseja depositar: 
-2025-11-13 11:25:40,868 - INFO - Dados enviados ao servidor: 7
-2025-11-13 11:25:40,869 - INFO - Dados recebidos do servidor: 🏧✅ Depósito realizado com sucesso!
-
-💰 Escolha uma das opções abaixo:
-	1 - Ver saldo
-	2 - Depositar Minicoins
-	3 - Sacar Minicoins
-	4 - Sair
-
-
-2025-11-13 11:26:24,846 - INFO - Dados enviados ao servidor: 3
-2025-11-13 11:26:24,847 - INFO - Dados recebidos do servidor: 🏧 Digite o valor de MiniCoins que deseja sacar: 
-2025-11-13 11:26:30,111 - INFO - Dados enviados ao servidor: 3
-2025-11-13 11:26:30,111 - INFO - Dados recebidos do servidor: 🏧✅ Saque realizado com sucesso!
+2025-11-13 15:34:31,995 - INFO - Dados enviados ao servidor: 2
+2025-11-13 15:34:31,996 - INFO - Dados recebidos do servidor: 🏧 Digite o valor de MiniCoins que deseja depositar: 
+2025-11-13 15:34:33,963 - INFO - Dados enviados ao servidor: 10
+2025-11-13 15:34:33,963 - INFO - Dados recebidos do servidor: 🏧✅ Depósito realizado com sucesso!
 
 💰 Escolha uma das opções abaixo:
 	1 - Ver saldo
@@ -55,10 +40,19 @@
 	4 - Sair
 
 
-2025-11-13 11:26:47,536 - INFO - Dados enviados ao servidor: 3
-2025-11-13 11:26:47,536 - INFO - Dados recebidos do servidor: 🏧 Digite o valor de MiniCoins que deseja sacar: 
-2025-11-13 11:26:49,136 - INFO - Dados enviados ao servidor: 10
-2025-11-13 11:26:49,136 - INFO - Dados recebidos do servidor: ⚠️ Saldo insuficiente!
+2025-11-13 15:34:36,859 - INFO - Dados enviados ao servidor: 1
+2025-11-13 15:34:36,860 - INFO - Dados recebidos do servidor: 🪙 Seu saldo é de 10 Minicoins.
+💰 Escolha uma das opções abaixo:
+	1 - Ver saldo
+	2 - Depositar Minicoins
+	3 - Sacar Minicoins
+	4 - Sair
+
+
+2025-11-13 15:34:42,795 - INFO - Dados enviados ao servidor: 2
+2025-11-13 15:34:42,796 - INFO - Dados recebidos do servidor: 🏧 Digite o valor de MiniCoins que deseja depositar: 
+2025-11-13 15:34:44,651 - INFO - Dados enviados ao servidor: 5
+2025-11-13 15:34:44,652 - INFO - Dados recebidos do servidor: 🏧✅ Depósito realizado com sucesso!
 
 💰 Escolha uma das opções abaixo:
 	1 - Ver saldo
@@ -67,3 +61,121 @@
 	4 - Sair
 
 
+2025-11-13 15:34:52,027 - INFO - Dados enviados ao servidor: 3
+2025-11-13 15:34:52,028 - INFO - Dados recebidos do servidor: 🏧 Digite o valor de MiniCoins que deseja sacar: 
+2025-11-13 15:34:54,539 - INFO - Dados enviados ao servidor: 1
+2025-11-13 15:34:54,540 - INFO - Dados recebidos do servidor: 🏧✅ Saque realizado com sucesso!
+
+💰 Escolha uma das opções abaixo:
+	1 - Ver saldo
+	2 - Depositar Minicoins
+	3 - Sacar Minicoins
+	4 - Sair
+
+
+2025-11-13 15:34:57,563 - INFO - Dados enviados ao servidor: 3
+2025-11-13 15:34:57,564 - INFO - Dados recebidos do servidor: 🏧 Digite o valor de MiniCoins que deseja sacar: 
+2025-11-13 15:35:01,003 - INFO - Dados enviados ao servidor: 10
+2025-11-13 15:35:01,004 - INFO - Dados recebidos do servidor: 🏧✅ Saque realizado com sucesso!
+
+💰 Escolha uma das opções abaixo:
+	1 - Ver saldo
+	2 - Depositar Minicoins
+	3 - Sacar Minicoins
+	4 - Sair
+
+
+2025-11-13 15:35:03,179 - INFO - Dados enviados ao servidor: 1
+2025-11-13 15:35:03,180 - INFO - Dados recebidos do servidor: 🪙 Seu saldo é de 4 Minicoins.
+💰 Escolha uma das opções abaixo:
+	1 - Ver saldo
+	2 - Depositar Minicoins
+	3 - Sacar Minicoins
+	4 - Sair
+
+
+2025-11-13 15:35:05,211 - INFO - Dados enviados ao servidor: 5
+2025-11-13 15:35:05,212 - INFO - Dados recebidos do servidor: ⚠️ Opção inválida. Tente novamente.
+
+💰 Escolha uma das opções abaixo:
+	1 - Ver saldo
+	2 - Depositar Minicoins
+	3 - Sacar Minicoins
+	4 - Sair
+
+
+2025-11-13 15:36:21,259 - INFO - Dados enviados ao servidor: 1
+2025-11-13 15:36:21,260 - INFO - Dados recebidos do servidor: 🪙 Seu saldo é de 4 Minicoins.
+💰 Escolha uma das opções abaixo:
+	1 - Ver saldo
+	2 - Depositar Minicoins
+	3 - Sacar Minicoins
+	4 - Sair
+
+
+2025-11-13 15:36:24,187 - INFO - Dados enviados ao servidor: 3
+2025-11-13 15:36:24,188 - INFO - Dados recebidos do servidor: 🏧 Digite o valor de MiniCoins que deseja sacar: 
+2025-11-13 15:36:25,659 - INFO - Dados enviados ao servidor: 5
+2025-11-13 15:36:25,660 - INFO - Dados recebidos do servidor: ⚠️ Saldo insuficiente!
+
+💰 Escolha uma das opções abaixo:
+	1 - Ver saldo
+	2 - Depositar Minicoins
+	3 - Sacar Minicoins
+	4 - Sair
+
+
+2025-11-13 15:37:00,988 - INFO - Dados enviados ao servidor: 5
+2025-11-13 15:37:00,988 - INFO - Dados recebidos do servidor: ⚠️ Opção inválida. Tente novamente.
+
+💰 Escolha uma das opções abaixo:
+	1 - Ver saldo
+	2 - Depositar Minicoins
+	3 - Sacar Minicoins
+	4 - Sair
+
+
+2025-11-13 15:37:29,291 - INFO - Dados enviados ao servidor: 1
+2025-11-13 15:37:29,292 - INFO - Dados recebidos do servidor: 🪙 Seu saldo é de 4 Minicoins.
+💰 Escolha uma das opções abaixo:
+	1 - Ver saldo
+	2 - Depositar Minicoins
+	3 - Sacar Minicoins
+	4 - Sair
+
+
+2025-11-13 15:37:45,867 - INFO - Dados enviados ao servidor: 3
+2025-11-13 15:37:45,868 - INFO - Dados recebidos do servidor: 🏧 Digite o valor de MiniCoins que deseja sacar: 
+2025-11-13 15:37:47,276 - INFO - Dados enviados ao servidor: 4
+2025-11-13 15:37:47,276 - INFO - Dados recebidos do servidor: 🏧✅ Saque realizado com sucesso!
+
+💰 Escolha uma das opções abaixo:
+	1 - Ver saldo
+	2 - Depositar Minicoins
+	3 - Sacar Minicoins
+	4 - Sair
+
+
+2025-11-13 15:37:48,427 - INFO - Dados enviados ao servidor: 1
+2025-11-13 15:37:48,428 - INFO - Dados recebidos do servidor: 🪙 Seu saldo é de 0 Minicoins.
+💰 Escolha uma das opções abaixo:
+	1 - Ver saldo
+	2 - Depositar Minicoins
+	3 - Sacar Minicoins
+	4 - Sair
+
+
+2025-11-13 15:37:51,691 - INFO - Dados enviados ao servidor: 2
+2025-11-13 15:37:51,692 - INFO - Dados recebidos do servidor: 🏧 Digite o valor de MiniCoins que deseja depositar: 
+2025-11-13 15:37:53,339 - INFO - Dados enviados ao servidor: 9
+2025-11-13 15:37:53,340 - INFO - Dados recebidos do servidor: 🏧✅ Depósito realizado com sucesso!
+
+💰 Escolha uma das opções abaixo:
+	1 - Ver saldo
+	2 - Depositar Minicoins
+	3 - Sacar Minicoins
+	4 - Sair
+
+
+2025-11-13 15:37:55,019 - INFO - Dados enviados ao servidor: 4
+2025-11-13 15:37:55,020 - INFO - Socket fechado.

@@ -76,7 +76,10 @@ while True:
         conexao = True
         while conexao:
 
+            # imprime no servidor o estado atual da blockchain
             print(bc.impressao())
+            logger.info(f"Estado atual da blockchain impresso no servidor:\n {bc.impressao()}")
+
 
             data = conn.recv(1024)  # recebe a escolha do cliente
             escolha = data.decode()
@@ -101,11 +104,11 @@ while True:
                 if (bc.numero_movimentacoes() == 0):
                     #Depósito inicial
                     bloco = MiniCoin()
-                    bloco.criar_movimentacao(0, nome, bc.numero_movimentacoes(), int(movimentacao), 0)
+                    bloco.criar_movimentacao(0, nome, int(movimentacao), 0)
                     bc.inserir_bloco(bloco)
                 else:
                     novo_bloco = MiniCoin()
-                    novo_bloco.criar_movimentacao(int(movimentacao), nome, bc.numero_movimentacoes(), bc.deposito_inicial(), bc.ultimo_hash())
+                    novo_bloco.criar_movimentacao(int(movimentacao), nome, bc.deposito_inicial(), bc.ultimo_hash())
                     bc.inserir_bloco(novo_bloco)
                 
                 mensagem = banco.deposito_sucesso()
@@ -125,9 +128,10 @@ while True:
                     mensagem = banco.saldo_insuficiente()
                     conn.send(mensagem.encode()+banco.menu().encode())
                     logger.warning(f"Cliente {nome} não tem saldo suficiente para a operação.")
+                    print(banco.saldo_insuficiente())
                 else:
                     novo_bloco = MiniCoin()
-                    novo_bloco.criar_movimentacao(-int(movimentacao), nome, bc.numero_movimentacoes(), bc.deposito_inicial(), bc.ultimo_hash())
+                    novo_bloco.criar_movimentacao(-int(movimentacao), nome, bc.deposito_inicial(), bc.ultimo_hash())
                     bc.inserir_bloco(novo_bloco)
                     mensagem = banco.saque_sucesso()
                     conn.send(mensagem.encode()+banco.menu().encode())
