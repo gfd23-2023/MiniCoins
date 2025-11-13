@@ -79,3 +79,7 @@ class Banco:
     def saldo_insuficiente(self):
         mensagem = "⚠️ Saldo insuficiente!\n"
         return mensagem
+
+    def movimentacao_invalida(self):
+        mensagem = "⚠️ Valor de movimentação inválido! Digite um valor positivo.\n"
+        return mensagem

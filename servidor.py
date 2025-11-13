@@ -106,6 +106,11 @@ while True:
                     bloco = MiniCoin()
                     bloco.criar_movimentacao(0, nome, int(movimentacao), 0)
                     bc.inserir_bloco(bloco)
+                elif int(movimentacao) <= 0:
+                    mensagem = banco.movimentacao_invalida()
+                    conn.send(mensagem.encode()+banco.menu().encode())
+                    logger.info(f"Enviado aviso de opção inválida ao cliente {nome}.")
+                    print(banco.movimentacao_invalida())
                 else:
                     novo_bloco = MiniCoin()
                     novo_bloco.criar_movimentacao(int(movimentacao), nome, bc.deposito_inicial(), bc.ultimo_hash())
@@ -129,6 +134,11 @@ while True:
                     conn.send(mensagem.encode()+banco.menu().encode())
                     logger.warning(f"Cliente {nome} não tem saldo suficiente para a operação.")
                     print(banco.saldo_insuficiente())
+                elif int(movimentacao) <= 0:
+                    mensagem = banco.movimentacao_invalida()
+                    conn.send(mensagem.encode()+banco.menu().encode())
+                    logger.info(f"Enviado aviso de opção inválida ao cliente {nome}.")
+                    print(banco.movimentacao_invalida())
                 else:
                     novo_bloco = MiniCoin()
                     novo_bloco.criar_movimentacao(-int(movimentacao), nome, bc.deposito_inicial(), bc.ultimo_hash())
