@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>README.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="minicoins-%F0%9F%92%B0">MiniCoins 💰</h1>
+<table>
+<thead>
+<tr>
+<th>Nome das Alunas:</th>
+<th>GRR</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Giovanna Fioravante Dalledone</td>
+<td>20232370</td>
+</tr>
+<tr>
+<td>Nadia Luana Lobkov</td>
+<td>20232381</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Linguagem Escolhida: Pyhton</strong> 🐍</p>
+<h2 id="sum%C3%A1rio">Sumário</h2>
+<ol>
+<li>Início da implementação</li>
+<li>Cliente-Servidor</li>
+<li>Chamadas Entre Cliente-Servidor e Blockchain</li>
+<li>Execução</li>
+</ol>
+<h2 id="arquivos">Arquivos</h2>
+<a href="cliente.py.txt">cliente.py.txt</a>: Programa que implementa o cliente do banco MiniCoins.<br>
+<a href="servidor.py.txt">servidor.py.txt</a>: Programa que implementa o servidor do banco MiniCoins.<br>
+<a href="banco.py.txt">banco.py.txt</a>: Classe auxiliar que implementa as mensagens trocadas entre o cliente e o servidor.<br>
+<a href="minicoin.py.txt">minicoin.py.txt</a>: Classe que implementa o bloco da blockchain.<br>
+<a href="blockchain.py.txt">blockchain.py.txt</a>: Classe que implementa a lista ligada que representa a blockchain.<br>
+<a href="cliente.log">cliente.log</a>: Arquivo de log do cliente.<br>
+<a href="servidor.log">servidor.log</a>: Arquivo de log
+<h2 id="1-in%C3%ADcio-da-implementa%C3%A7%C3%A3o-%F0%9F%8C%90">1. Início da Implementação 🌐</h2>
+<p>Após a escolha da linguagem, foi dado início ao desenvolvimento do trabalho que se deu pela implementação da lista ligada - base da blockchain - e da estrutura cliente-servidor. Enquanto isso, foi possível pesquisar e entender mais sobre a definição de <code>blockchains</code> e como utilizar o <code>hash</code>.</p>
+<p>O desenvolvimento do trabalho teve por início a implementação da lista ligada que representa a Blockchain. Para isso, foram definidas duas classes: <code>MiniCoins</code> e <code>blockchain</code>.</p>
+<style>
+.mermaid-wrapper { margin: 24px 40px; }
+</style>
+<div class="mermaid-wrapper">
+<pre><code class="language-mermaid"><div class="mermaid">classDiagram
+
+    class MiniCoin
+    MiniCoin : int movimentacao
+    MiniCoin : int movimentacao_tipo
+    MiniCoin : str proprietario
+    MiniCoin : str hash_atual
+    MiniCoin : str criado_em
+    MiniCoin : Minicoin prox
+    MiniCoin : criar_movimentacao()
+    MiniCoin : gerar_hash()
+    MiniCoin : retornar_hash()
+
+    class Blockchain
+    Blockchain : MiniCoin head
+    Blockchain : numero_blocos
+    Blockchain : numero_movimentacoes()
+    Blockchain : inserir_bloco()
+    Blockchain : valida()
+    Blockchain : deposito_inicial()
+    Blockchain : ultimo_hash()
+    Blockchain : impressao()
+
+</div></code></pre>
+</div>
+<p>A classe <code>MiniCoins</code> tem os métodos que manipulam as movimentações financeiras, enquanto isso, a classe <code>blockchain</code> tem os métodos que tratam a lista.</p>
+<p>Dado o contexto de uma blockchain, não havia sentido em implementar uma função de <code>remover_bloco</code>, pois o objetivo da lista é manter um registro de todas as movimentações do usuário.</p>
+<p>A primeira organização do código foi guardar as classes mencionadas em um primeiro arquivo chamado <code>lista.py</code>, porém, depois de conversas, foi chego à conclusão de que seria melhor isolar as classes em arquivos separados, sem a necessidade de uma pasta.</p>
+<h3 id="pequenos-problemas-de-implementa%C3%A7%C3%A3o">Pequenos Problemas de Implementação</h3>
+<p>Durante os testes, alguns problemas de implementação surgiram:</p>
+<ol>
+<li>O Depósito Inicial era alterado a cada movimentação. A solução foi criar um método na classe <code>Blockchain</code> chamado <code>deposito_inicial</code> que retorna o depósito inicial registrado na primeira operação.</li>
+<li>A validação utilizando as funções <code>hash</code> não funcionava. O problema era extremamente simples, o código não armazenava o retorno do cálculo do hash.</li>
+</ol>
+<h2 id="2-cliente-servidor">2. Cliente-Servidor</h2>
+<p>Para simular o banco usamos um sistema cliente-servidor usando a biblioteca <code>socket</code> em Python. Foi criada uma classe auxiliar <code>Banco</code> responsável pelas mensagens trocadas na interação, são diversos métodos que retornam mensagens (strings) que o cliente vai receber do servidor, como o banner do banco, instrução para a criação da conta, menu de opções e mensagens de controle do servidor contendo as ações realizadas pelo cliente.</p>
+<h3 id="fluxo-servidor">Fluxo Servidor</h3>
+<p>O programa <code>servidor.py</code> funciona da seguinte maneira:</p>
+<ol>
+<li>O servidor cria o socket, inicia o banco e entra em um loop para ficar na escuta/espera de conexões.</li>
+<li>Uma vez que o cliente se conecta, o servidor envia o menu de opções de ações para o cliente.</li>
+<li>Ao receber a resposta do cliente, ele excecuta o que foi pedido (chamando os métodos da classe <code>Blockchain</code>) e exibe novamente o menu até o cliente sair.</li>
+</ol>
+<div class="mermaid-wrapper">
+<pre><code class="language-mermaid"><div class="mermaid">flowchart TB
+    inicio([inicializa servidor])
+    escuta[espera / aceita conexão]
+    menu[envia menu e solicita ação]
+    processa[processa requisição]
+    encerra[encerra conexão]
+
+    inicio --> escuta --> menu --> processa
+    processa -- sair --> encerra
+    processa -- continuar --> menu
+    encerra --> escuta
+</div></code></pre>
+</div>
+<p><em>Durante esse processo, são impressas mensagens de controle no servidor que informam as ações do cliente.</em></p>
+<h3 id="fluxo-cliente">Fluxo Cliente</h3>
+<p>O programa <code>cliente.py</code> funciona da seguinte maneira:</p>
+<ol>
+<li>O cliente cria o socket e se conecta no servidor.</li>
+<li>Uma vez conectado, ele espera uma mensagem do servidor.</li>
+<li>Ele verifica de a mensagem é válida (se não é uma de encerramento) e espera o usuário digitar uma entrada como resposta.</li>
+<li>Ele envia essa resposta ao servidor e volta a esperar um retorno do servidor.</li>
+</ol>
+<div class="mermaid-wrapper">
+<pre><code class="language-mermaid"><div class="mermaid">flowchart TB
+    inicio([inicializa cliente])
+    conecta[conecta com servidor]
+    espera[espera / recebe mensagem]
+    le[lê entrada]
+    envia[envia resposta]
+    encerra([encerra conexão])
+
+    inicio --> conecta --> espera --> le --> envia
+    envia -- sair --> encerra
+    envia -- resposta --> espera
+</div></code></pre>
+</div>
+<p><em>Todas as mensagens recebidas são impressas para o usuário poder tomar alguma ação.</em></p>
+<h3 id="pequenos-problemas-durante-a-implementa%C3%A7%C3%A3o">Pequenos Problemas Durante a Implementação</h3>
+<p>Durante a implementação dos programas Cliente e Servidor enfrentamos alguns pequenos desafios:</p>
+<ol>
+<li>
+<p><strong>Dependência do servidor com o cliente:</strong> depois da execução dos programas, <strong>ao encerrar o cliente, o servidor também era encerrado.</strong> Isso aconteceu pois a função <code>listen()</code> estava fora do laço, então ao encerrar o cliente, o servidor perdia a conexão e não voltava a ouvir/esperar por novas conexões.</p>
+</li>
+<li>
+<p><strong>Saída do cliente:</strong> quando o cliente decidia sair do banco, <strong>o banco enviava a mensagem de saida mas o cliente não saia.</strong> Isso acontecia pois, da maneira que o cliente foi implementado, ao receber uma mensagem ele sempre lê um <em>input</em> para enviar ao servidor. Então, quando o servidor enviava um &quot;adeus&quot; ao cliente, o cliente ficava esperando um input e não encerrava a conexão. A forma encontrada para contornar esse problema (sem atrapalhar o fluxo proposto) foi adicionar uma condição: se ele recebesse a mensagem de despedida, então ele encerra.</p>
+</li>
+</ol>
+<h2 id="3-chamadas-cliente-servidor-blockchain">3. Chamadas Cliente-Servidor-Blockchain</h2>
+<p>Implementar a &quot;conversa&quot; entre o cliente e o servidor foi uma tarefa mais simples do que o esperado.<br>
+Nesse contexto, o servidor - além de enviar as opções ao cliente - mantém a blockchain e é nele que as funções são chamadas. Um detalhe a ressaltar é que o saldo da conta do usuário não é guardado na estrutura, mas sim calculado ao percorrer toda a blockchain quando o método é chamado.</p>
+<h3 id="31-mensagens-de-log">3.1 Mensagens de Log</h3>
+<p>Todas as ações do servidor, bem como as escolhas do cliente, são documentadas nos arquivos <code>servidor.log</code> e <code>cliente.log</code>. As mensagens são geradas pela biblioteca <code>logging</code>, presente tanto em <code>servidor.py</code> quanto <code>cliente.py</code>.</p>
+<h3 id="pequenos-probelmas-durante-a-implementa%C3%A7%C3%A3o">Pequenos Probelmas Durante a Implementação</h3>
+<p>Alguns problemas foram enfrentados durante essa etapa, a maioria deles foi consequência de desatenção com os nomes das variáveis e com os atributos das classes.</p>
+<ol>
+<li><strong>Cálculo do saldo</strong>: O cálculo do saldo sempre retornava o mesmo valor do depósito inicial. Isso acontecia porque na linha de incrementar o saldo, a variável estava errada. Era para acumular &quot;saldo + movimentação&quot; e o que estava escrito era <code>saldo += saldo</code>.</li>
+<li><strong>Uma confusão</strong>: Antes de chamar as funções da blockchain no servidor, foi um pouco confuso entender como a linguagem Python lida com a arquitetura cliente-servidor. Era suspeitosamente simples. Depois de entendido, foi bem simples o funcionamento.</li>
+</ol>
+<h2 id="4-execu%C3%A7%C3%A3o-%F0%9F%A4%96">4. Execução 🤖</h2>
+<p>Para executar o programa, é preciso ter o endereço IP do servidor e a porta. Executamos assim:</p>
+<pre class="hljs"><code><div>python3 servidor.py &lt;ip_servidor&gt; &lt;porta&gt;
+</div></code></pre>
+<pre class="hljs"><code><div>python3 cliente.py &lt;ip_servidor&gt; &lt;porta&gt;
+</div></code></pre>
+<p><strong>Importante</strong>: É preciso garantir que o computador tenha instalado uma versão superior ou igual a 3.7 do python ou, pelo menos, que tenha a biblioteca <code>dataclasses</code> instalada. Por garantia, executar <code>pip install dataclasses</code>.</p>
+
+</body>
+</html>
