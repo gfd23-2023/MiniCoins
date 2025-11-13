@@ -5,6 +5,14 @@ from banco import Banco
 from minicoin import MiniCoin
 from blockchain import blockchain
 
+# obtém o IP do servidor a partir dos argumentos da linha de comando
+if len(sys.argv) > 2:
+    ip_servidor = sys.argv[1]
+    porta = int(sys.argv[2])
+else:
+    print("Uso: python3 servidor.py <ip_servidor> <porta>")
+    sys.exit(1)
+33
 
 # configurações do log
 # - ele será salvo no arquivo servidor.log
@@ -18,13 +26,10 @@ logger.info("Iniciando o servidor...") # cria uma mensagem de log
 # cria o socket TCP
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 logger.info("Socket criado com sucesso.")
-port = 2623 # define a porta
 
 # vincula o socket à porta 
-# usamos o endereço de loopback (maquina local)
-#sock.bind(('10.254.221.73', port)) #ufpr
-sock.bind(('192.168.100.5', port))  #casa
-logger.info(f"Socket vinculado à porta {port}.") 
+sock.bind((ip_servidor, porta))  #casa
+logger.info(f"Socket vinculado à porta {porta}.") 
 
 banco = Banco()  # cria uma instância do Banco
 logger.info("Instância do Banco criada com sucesso.")
@@ -33,7 +38,14 @@ logger.info("Instância do Banco criada com sucesso.")
 #Cria a blockchain
 bc = blockchain()
 
+
+# LOOP PRINCIPAL DO SERVIDOR
+# vai ficar esperando por conexões
+# ao receber uma conexão, ele aceita e cria um novo socket (conn) para se comunicar com o cliente
+# ao se conectar, envia uma mensagens do banco e espera por respostas
+# trata respostas do cliente, executa ações no banco chamando metodos da blockchain 
 while True:
+
     sock.listen() # coloca o socket em modo de escuta
     logger.info("Socket agora está em modo de escuta.")
 
@@ -48,7 +60,6 @@ while True:
     data = conn.recv(1024) # recebe uma resposta (até 1024 bytes)
     logger.info(f"Dados recebidos do cliente: {data.decode()}")
 
-    nome = ''
     if data.decode().upper() == 'S':
         logger.info("Cliente optou por criar uma conta.")
         print(banco.criou_conta())
@@ -74,6 +85,8 @@ while True:
                 conn.send(resposta.encode()+banco.menu().encode())
                 logger.info("Enviado saldo ao cliente.")
                 print(banco.viu_saldo())
+
+
             elif escolha == '2':
                 mensagem = "Digite o valor que deseja depositar: "
                 conn.send(mensagem.encode())
@@ -94,6 +107,8 @@ while True:
                 conn.send(resposta.encode()+banco.menu().encode())
                 logger.info("Confirmação de depósito enviada ao cliente.")
                 print(banco.fez_deposito())
+
+
             elif escolha == '3':
                 mensagem = "Digite o valor que deseja retirar: "
                 conn.send(mensagem.encode())
@@ -102,7 +117,7 @@ while True:
 
                 if int(movimentacao) > bc.retorna_saldo():
                     resposta = "Saldo insuficiente!"
-                    conn.send(resposta.encode())
+                    conn.send(resposta.encode()+banco.menu().encode())
                 else:
                     novo_bloco = MiniCoin()
                     novo_bloco.criar_movimentacao(-int(movimentacao), nome, bc.numero_movimentacoes(), bc.deposito_inicial(), bc.ultimo_hash())
@@ -111,12 +126,16 @@ while True:
                     conn.send(resposta.encode()+banco.menu().encode())
                     logger.info("Confirmação de saque enviada ao cliente.")
                     print(banco.fez_saque())
+
+
             elif escolha == '4':
                 resposta = "Saindo do banco. Até logo!"
                 conn.send(resposta.encode())
                 logger.info("Cliente saiu do banco.")
                 conexao = False
                 print(banco.encerra_conexao())
+
+
             else:
                 resposta = "Opção inválida. Tente novamente."
                 conn.send(resposta.encode()+banco.menu().encode())

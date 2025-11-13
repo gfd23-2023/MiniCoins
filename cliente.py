@@ -3,6 +3,15 @@ import sys
 import logging # importa a biblioteca para criar logs
 
 
+# obtém o IP do servidor a partir dos argumentos da linha de comando
+if len(sys.argv) > 2:
+    ip_servidor = sys.argv[1]
+    porta = int(sys.argv[2])
+else:
+    print("Uso: python3 servidor.py <ip_servidor> <porta>")
+    sys.exit(1)
+
+
 # configurações do log
 # - ele será salvo no arquivo cliente.log
 # - o formato do log incluirá data, tipo do log e a mensagem
@@ -14,11 +23,9 @@ logger.info("Iniciando o cliente...") # cria uma mensagem de log
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # cria o socket TCP
 logger.info("Socket criado com sucesso.")
-port = 2623 # define a porta
 
-#sock.connect(('10.254.221.73', port)) # conecta ao servidor ufpr
-sock.connect(('192.168.100.5', port))      #casa precisei mudar para conncet, porque bind não estava funcionando
-logger.info(f"Conectado ao servidor na porta {port}.")
+sock.connect((ip_servidor, porta))      
+logger.info(f"Conectado ao servidor na porta {porta}.")
 
 conexao = True
 while conexao:
