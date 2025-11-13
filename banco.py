@@ -52,3 +52,30 @@ class Banco:
         mensagem = "⚠️ Cliente escolheu uma opção inválida no menu.\n"
         return mensagem
 
+    def saldo_cliente(self, saldo):
+        resposta = "🪙 Seu saldo é de {} Minicoins.".format(saldo)
+        return resposta
+
+    def solicita_deposito(self):
+        mensagem = "🏧 Digite o valor de MiniCoins que deseja depositar: "
+        return mensagem
+
+    def deposito_sucesso(self):
+        mensagem = "🏧✅ Depósito realizado com sucesso!\n"
+        return mensagem
+
+    def solicita_saque(self):
+        mensagem = "🏧 Digite o valor de MiniCoins que deseja sacar: "
+        return mensagem
+
+    def saque_sucesso(self):
+        mensagem = "🏧✅ Saque realizado com sucesso!\n"
+        return mensagem
+
+    def opcao_invalida(self):
+        mensagem = "⚠️ Opção inválida. Tente novamente.\n"
+        return mensagem
+
+    def saldo_insuficiente(self):
+        mensagem = "⚠️ Saldo insuficiente!\n"
+        return mensagem

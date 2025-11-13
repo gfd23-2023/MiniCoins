@@ -1,20 +1,17 @@
-2025-11-12 22:27:14,886 - INFO - Iniciando o servidor...
-2025-11-12 22:27:14,886 - INFO - Socket criado com sucesso.
-2025-11-12 22:27:14,886 - INFO - Socket vinculado à porta 2623.
-2025-11-12 22:27:14,886 - INFO - Instância do Banco criada com sucesso.
-2025-11-12 22:27:14,886 - INFO - Socket agora está em modo de escuta.
-2025-11-12 22:27:16,726 - INFO - Conexão aceita de ('192.168.100.72', 51618).
-2025-11-12 22:27:25,606 - INFO - Dados recebidos do cliente: nadia
-2025-11-12 22:27:25,606 - INFO - Cliente optou por não criar uma conta. Encerrando conexão.
-2025-11-12 22:27:25,606 - INFO - Conexão com ('192.168.100.72', 51618) fechada.
-2025-11-12 22:27:25,606 - INFO - Socket agora está em modo de escuta.
-2025-11-12 22:27:30,279 - INFO - Conexão aceita de ('192.168.100.72', 40696).
-2025-11-12 22:27:31,390 - INFO - Dados recebidos do cliente: s
-2025-11-12 22:27:31,390 - INFO - Cliente optou por criar uma conta.
-2025-11-12 22:27:34,118 - INFO - Menu enviado ao cliente.
-2025-11-12 22:27:43,486 - INFO - Escolha do cliente: 2
-2025-11-12 22:27:44,870 - INFO - Confirmação de depósito enviada ao cliente.
-2025-11-12 22:27:46,886 - INFO - Escolha do cliente: 3
-2025-11-12 22:27:50,046 - INFO - Escolha do cliente: 4
-2025-11-12 22:27:50,046 - INFO - Cliente saiu do banco.
-2025-11-12 22:27:50,046 - INFO - Socket agora está em modo de escuta.
+2025-11-13 11:24:55,787 - INFO - Iniciando o servidor...
+2025-11-13 11:24:55,787 - INFO - Socket criado com sucesso.
+2025-11-13 11:24:55,787 - INFO - Socket vinculado à porta 2622.
+2025-11-13 11:24:55,787 - INFO - Instância do Banco criada com sucesso.
+2025-11-13 11:24:55,787 - INFO - Socket agora está em modo de escuta.
+2025-11-13 11:24:57,915 - INFO - Conexão aceita de ('192.168.100.145', 49616).
+2025-11-13 11:25:05,122 - INFO - Dados recebidos do cliente: s
+2025-11-13 11:25:05,122 - INFO - Cliente entrou no Banco Central das Minicoins.
+2025-11-13 11:25:06,858 - INFO - Menu enviado ao cliente.
+2025-11-13 11:25:30,483 - INFO - Escolha do cliente nadia: 2
+2025-11-13 11:25:32,596 - INFO - Confirmação de depósito enviada ao cliente nadia.
+2025-11-13 11:25:38,868 - INFO - Escolha do cliente nadia: 2
+2025-11-13 11:25:40,869 - INFO - Confirmação de depósito enviada ao cliente nadia.
+2025-11-13 11:26:24,846 - INFO - Escolha do cliente nadia: 3
+2025-11-13 11:26:30,111 - INFO - Confirmação de saque enviada ao cliente nadia.
+2025-11-13 11:26:47,536 - INFO - Escolha do cliente nadia: 3
+2025-11-13 11:26:49,136 - WARNING - Cliente nadia não tem saldo suficiente para a operação.
