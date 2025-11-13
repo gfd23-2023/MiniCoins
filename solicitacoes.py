@@ -2,8 +2,8 @@
 Solicita ações ao servidor
 '''
 
-import Minicoin
-import Blockchain
+import minicoin
+import blockchain
 
 #Solicita depósito inicial
 def solicita_deposito_inicial(proprietario: str, valor: int):

@@ -1,5 +1,5 @@
-from Minicoin import MiniCoin
-from Blockchain import blockchain
+from minicoin import MiniCoin
+from blockchain import blockchain
 
 #Cria a blockchain
 bc = blockchain()

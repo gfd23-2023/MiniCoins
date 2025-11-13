@@ -1,6 +1,6 @@
 from dataclasses import dataclass           #dataclass é menos verboso do que class e não precisa configurar o __init__
 from typing import Optional                 #pois o próximo elemento pode existir ou pode ser nulo
-from Minicoin import MiniCoin
+from minicoin import MiniCoin
 
 @dataclass
 class blockchain:

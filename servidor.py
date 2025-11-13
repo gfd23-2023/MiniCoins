@@ -2,8 +2,8 @@ import socket # importa a biblioteca de sockets
 import sys 
 import logging # importa a biblioteca para criar logs
 from banco import Banco 
-from Minicoin import MiniCoin
-from Blockchain import blockchain
+from minicoin import MiniCoin
+from blockchain import blockchain
 
 
 # configurações do log
