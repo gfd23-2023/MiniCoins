@@ -11,6 +11,9 @@ class blockchain:
     def numero_movimentacoes(self):
         return self.numero_blocos
 
+    #Função para validar a blockchain
+    #Retorna uma referência para o último bloco se a blockchain for válida 
+    #e retorna None se for inválida
     def valida(self):
 
         #Valida a blockchain inteira

@@ -1,8 +1,7 @@
 # MiniCoins 💰
 
-**Alunas:**  
 
-|Nome:| GRR |  
+|Nome das Alunas:| GRR |  
 |-------------------------------|------  
 | Giovanna Fioravante Dalledone |  20232370
 | Nadia Luana Lobkov            |  20232381  
@@ -10,26 +9,14 @@
 **Linguagem Escolhida: Pyhton** 🐍  
 
 ## Sumário
-0. Preparação do ambiente
 1. Início da implementação
 2. Cliente-Servidor
 3. Chamadas Entre Cliente-Servidor e Blockchain
-
-## 1. Início da Implementação  
-Após a escolha da linguagem, foi dado início ao desenvolvimento do trabalho que se deu pela implementação da lista ligada - base da blockchain - e da estrutura cliente-servidor. Enquanto isso, foi possível pesquisar e entender mais sobre a definição de `blockchains` e como utilizar o `hash`.
-
-
-
-## 0. Preparando o Ambiente 🤖
-Para que o código funcione como esperado, execute o seguinte comando:
-```
-pip install dataclasses
-```
+4. Execução
 
 ## 1. Início da Implementação 🌐
 Após a escolha da linguagem, foi dado início ao desenvolvimento do trabalho que se deu pela implementação da lista ligada - base da blockchain - e da estrutura cliente-servidor. Enquanto isso, foi possível pesquisar e entender mais sobre a definição de `blockchains` e como utilizar o `hash`.
 
-> **Importante**: É preciso garantir que o computador tenha instalado uma versão superior ou igual a 3.7 do python ou, pelo menos, que tenha a biblioteca `dataclasses` instalada. Por garantia, executar `pip install dataclasses`.
 
 O desenvolvimento do trabalho teve por início a implementação da lista ligada que representa a Blockchain. Para isso, foram definidas duas classes: `MiniCoins` e `blockchain`.
 
@@ -64,7 +51,7 @@ classDiagram
     Blockchain : valida()
     Blockchain : deposito_inicial()
     Blockchain : ultimo_hash()
-    Blockchain : imprime()
+    Blockchain : impressao()
 
 ```
 </div>
@@ -127,7 +114,7 @@ flowchart TB
     inicio([inicializa cliente])
     conecta[conecta com servidor]
     espera[espera / recebe mensagem]
-    le[le entrada]
+    le[lê entrada]
     envia[envia resposta]
     encerra([encerra conexão])
 
@@ -149,4 +136,27 @@ Durante a implementação dos programas Cliente e Servidor enfrentamos alguns pe
 
 ## 3. Chamadas Cliente-Servidor-Blockchain
 
-No momento de juntar o cliente-servidor com o serviço da blockchain foi necessário implementar funções que solicitassem a ação desejada pelo cliente. 
+Implementar a "conversa" entre o cliente e o servidor foi uma tarefa mais simples do que o esperado.  
+Nesse contexto, o servidor - além de enviar as opções ao cliente - mantém a blockchain e é nele que as funções são chamadas. Um detalhe a ressaltar é que o saldo da conta do usuário não é guardado na estrutura, mas sim calculado ao percorrer toda a blockchain quando o método é chamado. 
+
+### 3.1 Mensagens de Log
+
+Todas as ações do servidor, bem como as escolhas do cliente, são documentadas nos arquivos `servidor.log`e `cliente.log`. As mensagens são geradas pela biblioteca `logging`, presente tanto em `servidor.py` quanto `cliente.py`.
+
+### Pequenos Probelmas Durante a Implementação
+Alguns problemas foram enfrentados durante essa etapa, a maioria deles foi consequência de desatenção com os nomes das variáveis e com os atributos das classes.
+1. **Cálculo do saldo**: O cálculo do saldo sempre retornava o mesmo valor do depósito inicial. Isso acontecia porque na linha de incrementar o saldo, a variável estava errada. Era para acumular "saldo + movimentação" e o que estava escrito era `saldo += saldo`.
+2. **Uma confusão**: Antes de chamar as funções da blockchain no servidor, foi um pouco confuso entender como a linguagem Python lida com a arquitetura cliente-servidor. Era suspeitosamente simples. Depois de entendido, foi bem simples o funcionamento.
+
+## 4. Execução 🤖
+
+Para executar o programa, é preciso ter o endereço IP do servidor e a porta. Executamos assim:
+
+``` bash
+python3 servidor.py <ip_servidor> <porta>
+```
+```bash
+python3 cliente.py <ip_servidor> <porta>
+```
+
+**Importante**: É preciso garantir que o computador tenha instalado uma versão superior ou igual a 3.7 do python ou, pelo menos, que tenha a biblioteca `dataclasses` instalada. Por garantia, executar `pip install dataclasses`.
