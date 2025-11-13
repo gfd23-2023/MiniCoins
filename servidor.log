@@ -1,20 +1,618 @@
-2025-11-12 22:27:14,886 - INFO - Iniciando o servidor...
-2025-11-12 22:27:14,886 - INFO - Socket criado com sucesso.
-2025-11-12 22:27:14,886 - INFO - Socket vinculado à porta 2623.
-2025-11-12 22:27:14,886 - INFO - Instância do Banco criada com sucesso.
-2025-11-12 22:27:14,886 - INFO - Socket agora está em modo de escuta.
-2025-11-12 22:27:16,726 - INFO - Conexão aceita de ('192.168.100.72', 51618).
-2025-11-12 22:27:25,606 - INFO - Dados recebidos do cliente: nadia
-2025-11-12 22:27:25,606 - INFO - Cliente optou por não criar uma conta. Encerrando conexão.
-2025-11-12 22:27:25,606 - INFO - Conexão com ('192.168.100.72', 51618) fechada.
-2025-11-12 22:27:25,606 - INFO - Socket agora está em modo de escuta.
-2025-11-12 22:27:30,279 - INFO - Conexão aceita de ('192.168.100.72', 40696).
-2025-11-12 22:27:31,390 - INFO - Dados recebidos do cliente: s
-2025-11-12 22:27:31,390 - INFO - Cliente optou por criar uma conta.
-2025-11-12 22:27:34,118 - INFO - Menu enviado ao cliente.
-2025-11-12 22:27:43,486 - INFO - Escolha do cliente: 2
-2025-11-12 22:27:44,870 - INFO - Confirmação de depósito enviada ao cliente.
-2025-11-12 22:27:46,886 - INFO - Escolha do cliente: 3
-2025-11-12 22:27:50,046 - INFO - Escolha do cliente: 4
-2025-11-12 22:27:50,046 - INFO - Cliente saiu do banco.
-2025-11-12 22:27:50,046 - INFO - Socket agora está em modo de escuta.
+2025-11-13 15:34:06,028 - INFO - Iniciando o servidor...
+2025-11-13 15:34:06,028 - INFO - Socket criado com sucesso.
+2025-11-13 15:34:06,028 - INFO - Socket vinculado à porta 2623.
+2025-11-13 15:34:06,028 - INFO - Instância do Banco criada com sucesso.
+2025-11-13 15:34:06,029 - INFO - Socket agora está em modo de escuta.
+2025-11-13 15:34:09,154 - INFO - Conexão aceita de ('10.254.237.4', 50690).
+2025-11-13 15:34:17,131 - INFO - Dados recebidos do cliente: n
+2025-11-13 15:34:17,132 - INFO - Cliente optou por não entrar na conta. Encerrando conexão.
+2025-11-13 15:34:17,132 - INFO - Conexão com ('10.254.237.4', 50690) fechada.
+2025-11-13 15:34:17,132 - INFO - Socket agora está em modo de escuta.
+2025-11-13 15:34:18,850 - INFO - Conexão aceita de ('10.254.237.4', 38116).
+2025-11-13 15:34:20,235 - INFO - Dados recebidos do cliente: s
+2025-11-13 15:34:20,236 - INFO - Cliente entrou no Banco Central das Minicoins.
+2025-11-13 15:34:22,779 - INFO - Menu enviado ao cliente.
+2025-11-13 15:34:22,779 - INFO - Estado atual da blockchain impresso no servidor:
+ 🪙 == 🪙 == 🪙 == 🪙 == BLOCKCHAIN == 🪙 == 🪙 == 🪙 == 🪙
+
+Nenhuma Movimentação
+
+🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙
+
+2025-11-13 15:34:27,515 - INFO - Escolha do cliente james: 1
+2025-11-13 15:34:27,516 - INFO - Saldo do cliente james foi exibido.
+2025-11-13 15:34:27,516 - INFO - Estado atual da blockchain impresso no servidor:
+ 🪙 == 🪙 == 🪙 == 🪙 == BLOCKCHAIN == 🪙 == 🪙 == 🪙 == 🪙
+
+Nenhuma Movimentação
+
+🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙
+
+2025-11-13 15:34:31,995 - INFO - Escolha do cliente james: 2
+2025-11-13 15:34:33,963 - INFO - Confirmação de depósito enviada ao cliente james.
+2025-11-13 15:34:33,964 - INFO - Estado atual da blockchain impresso no servidor:
+ 🪙 == 🪙 == 🪙 == 🪙 == BLOCKCHAIN == 🪙 == 🪙 == 🪙 == 🪙
+
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀- BLOCO 1 -⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+Proprietário: james
+Movimentação: 0
+Depósito Inicial: 10
+Tipo da Movimentação: Primeiro Depósito
+Criado em: 2025-11-13T15:34:33.963539
+Hash Atual: e7b76e262994432911017de59740834e1bff59fb11108d7ab9caa510089a715d
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+
+💰 Saldo Atual: 10 Minicoins
+
+🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙
+
+2025-11-13 15:34:36,859 - INFO - Escolha do cliente james: 1
+2025-11-13 15:34:36,860 - INFO - Saldo do cliente james foi exibido.
+2025-11-13 15:34:36,860 - INFO - Estado atual da blockchain impresso no servidor:
+ 🪙 == 🪙 == 🪙 == 🪙 == BLOCKCHAIN == 🪙 == 🪙 == 🪙 == 🪙
+
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀- BLOCO 1 -⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+Proprietário: james
+Movimentação: 0
+Depósito Inicial: 10
+Tipo da Movimentação: Primeiro Depósito
+Criado em: 2025-11-13T15:34:33.963539
+Hash Atual: e7b76e262994432911017de59740834e1bff59fb11108d7ab9caa510089a715d
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+
+💰 Saldo Atual: 10 Minicoins
+
+🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙
+
+2025-11-13 15:34:42,795 - INFO - Escolha do cliente james: 2
+2025-11-13 15:34:44,651 - INFO - Confirmação de depósito enviada ao cliente james.
+2025-11-13 15:34:44,652 - INFO - Estado atual da blockchain impresso no servidor:
+ 🪙 == 🪙 == 🪙 == 🪙 == BLOCKCHAIN == 🪙 == 🪙 == 🪙 == 🪙
+
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀- BLOCO 1 -⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+Proprietário: james
+Movimentação: 0
+Depósito Inicial: 10
+Tipo da Movimentação: Primeiro Depósito
+Criado em: 2025-11-13T15:34:33.963539
+Hash Atual: e7b76e262994432911017de59740834e1bff59fb11108d7ab9caa510089a715d
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+                    |
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀- BLOCO 2 -⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+Proprietário: james
+Movimentação: 5
+Depósito Inicial: 10
+Tipo da Movimentação: Depósito
+Criado em: 2025-11-13T15:34:44.651705
+Hash Atual: 29b4adecdb94781155a3ef5a3c4c9c7d4cae578a2d48c3caac0a6128178b6a07
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+
+💰 Saldo Atual: 15 Minicoins
+
+🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙
+
+2025-11-13 15:34:52,027 - INFO - Escolha do cliente james: 3
+2025-11-13 15:34:54,540 - INFO - Confirmação de saque enviada ao cliente james.
+2025-11-13 15:34:54,540 - INFO - Estado atual da blockchain impresso no servidor:
+ 🪙 == 🪙 == 🪙 == 🪙 == BLOCKCHAIN == 🪙 == 🪙 == 🪙 == 🪙
+
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀- BLOCO 1 -⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+Proprietário: james
+Movimentação: 0
+Depósito Inicial: 10
+Tipo da Movimentação: Primeiro Depósito
+Criado em: 2025-11-13T15:34:33.963539
+Hash Atual: e7b76e262994432911017de59740834e1bff59fb11108d7ab9caa510089a715d
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+                    |
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀- BLOCO 2 -⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+Proprietário: james
+Movimentação: 5
+Depósito Inicial: 10
+Tipo da Movimentação: Depósito
+Criado em: 2025-11-13T15:34:44.651705
+Hash Atual: 29b4adecdb94781155a3ef5a3c4c9c7d4cae578a2d48c3caac0a6128178b6a07
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+                    |
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀- BLOCO 3 -⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+Proprietário: james
+Movimentação: -1
+Depósito Inicial: 10
+Tipo da Movimentação: Saque
+Criado em: 2025-11-13T15:34:54.539724
+Hash Atual: 0f3bf00422f2b6b36f69da32bfbebaca6a0395736089bdbd2ba8480837f4e747
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+
+💰 Saldo Atual: 14 Minicoins
+
+🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙
+
+2025-11-13 15:34:57,563 - INFO - Escolha do cliente james: 3
+2025-11-13 15:35:01,004 - INFO - Confirmação de saque enviada ao cliente james.
+2025-11-13 15:35:01,004 - INFO - Estado atual da blockchain impresso no servidor:
+ 🪙 == 🪙 == 🪙 == 🪙 == BLOCKCHAIN == 🪙 == 🪙 == 🪙 == 🪙
+
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀- BLOCO 1 -⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+Proprietário: james
+Movimentação: 0
+Depósito Inicial: 10
+Tipo da Movimentação: Primeiro Depósito
+Criado em: 2025-11-13T15:34:33.963539
+Hash Atual: e7b76e262994432911017de59740834e1bff59fb11108d7ab9caa510089a715d
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+                    |
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀- BLOCO 2 -⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+Proprietário: james
+Movimentação: 5
+Depósito Inicial: 10
+Tipo da Movimentação: Depósito
+Criado em: 2025-11-13T15:34:44.651705
+Hash Atual: 29b4adecdb94781155a3ef5a3c4c9c7d4cae578a2d48c3caac0a6128178b6a07
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+                    |
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀- BLOCO 3 -⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+Proprietário: james
+Movimentação: -1
+Depósito Inicial: 10
+Tipo da Movimentação: Saque
+Criado em: 2025-11-13T15:34:54.539724
+Hash Atual: 0f3bf00422f2b6b36f69da32bfbebaca6a0395736089bdbd2ba8480837f4e747
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+                    |
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀- BLOCO 4 -⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+Proprietário: james
+Movimentação: -10
+Depósito Inicial: 10
+Tipo da Movimentação: Saque
+Criado em: 2025-11-13T15:35:01.003844
+Hash Atual: a142591846020a9d82a7993bcbd0f14d15b891ff44e7ff84b1cb0dd9fcef40ba
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+
+💰 Saldo Atual: 4 Minicoins
+
+🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙
+
+2025-11-13 15:35:03,179 - INFO - Escolha do cliente james: 1
+2025-11-13 15:35:03,180 - INFO - Saldo do cliente james foi exibido.
+2025-11-13 15:35:03,180 - INFO - Estado atual da blockchain impresso no servidor:
+ 🪙 == 🪙 == 🪙 == 🪙 == BLOCKCHAIN == 🪙 == 🪙 == 🪙 == 🪙
+
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀- BLOCO 1 -⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+Proprietário: james
+Movimentação: 0
+Depósito Inicial: 10
+Tipo da Movimentação: Primeiro Depósito
+Criado em: 2025-11-13T15:34:33.963539
+Hash Atual: e7b76e262994432911017de59740834e1bff59fb11108d7ab9caa510089a715d
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+                    |
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀- BLOCO 2 -⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+Proprietário: james
+Movimentação: 5
+Depósito Inicial: 10
+Tipo da Movimentação: Depósito
+Criado em: 2025-11-13T15:34:44.651705
+Hash Atual: 29b4adecdb94781155a3ef5a3c4c9c7d4cae578a2d48c3caac0a6128178b6a07
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+                    |
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀- BLOCO 3 -⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+Proprietário: james
+Movimentação: -1
+Depósito Inicial: 10
+Tipo da Movimentação: Saque
+Criado em: 2025-11-13T15:34:54.539724
+Hash Atual: 0f3bf00422f2b6b36f69da32bfbebaca6a0395736089bdbd2ba8480837f4e747
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+                    |
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀- BLOCO 4 -⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+Proprietário: james
+Movimentação: -10
+Depósito Inicial: 10
+Tipo da Movimentação: Saque
+Criado em: 2025-11-13T15:35:01.003844
+Hash Atual: a142591846020a9d82a7993bcbd0f14d15b891ff44e7ff84b1cb0dd9fcef40ba
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+
+💰 Saldo Atual: 4 Minicoins
+
+🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙
+
+2025-11-13 15:35:05,211 - INFO - Escolha do cliente james: 5
+2025-11-13 15:35:05,212 - INFO - Enviado aviso de opção inválida ao cliente.
+2025-11-13 15:35:05,212 - INFO - Estado atual da blockchain impresso no servidor:
+ 🪙 == 🪙 == 🪙 == 🪙 == BLOCKCHAIN == 🪙 == 🪙 == 🪙 == 🪙
+
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀- BLOCO 1 -⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+Proprietário: james
+Movimentação: 0
+Depósito Inicial: 10
+Tipo da Movimentação: Primeiro Depósito
+Criado em: 2025-11-13T15:34:33.963539
+Hash Atual: e7b76e262994432911017de59740834e1bff59fb11108d7ab9caa510089a715d
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+                    |
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀- BLOCO 2 -⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+Proprietário: james
+Movimentação: 5
+Depósito Inicial: 10
+Tipo da Movimentação: Depósito
+Criado em: 2025-11-13T15:34:44.651705
+Hash Atual: 29b4adecdb94781155a3ef5a3c4c9c7d4cae578a2d48c3caac0a6128178b6a07
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+                    |
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀- BLOCO 3 -⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+Proprietário: james
+Movimentação: -1
+Depósito Inicial: 10
+Tipo da Movimentação: Saque
+Criado em: 2025-11-13T15:34:54.539724
+Hash Atual: 0f3bf00422f2b6b36f69da32bfbebaca6a0395736089bdbd2ba8480837f4e747
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+                    |
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀- BLOCO 4 -⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+Proprietário: james
+Movimentação: -10
+Depósito Inicial: 10
+Tipo da Movimentação: Saque
+Criado em: 2025-11-13T15:35:01.003844
+Hash Atual: a142591846020a9d82a7993bcbd0f14d15b891ff44e7ff84b1cb0dd9fcef40ba
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+
+💰 Saldo Atual: 4 Minicoins
+
+🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙
+
+2025-11-13 15:36:21,260 - INFO - Escolha do cliente james: 1
+2025-11-13 15:36:21,260 - INFO - Saldo do cliente james foi exibido.
+2025-11-13 15:36:21,260 - INFO - Estado atual da blockchain impresso no servidor:
+ 🪙 == 🪙 == 🪙 == 🪙 == BLOCKCHAIN == 🪙 == 🪙 == 🪙 == 🪙
+
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀- BLOCO 1 -⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+Proprietário: james
+Movimentação: 0
+Depósito Inicial: 10
+Tipo da Movimentação: Primeiro Depósito
+Criado em: 2025-11-13T15:34:33.963539
+Hash Atual: e7b76e262994432911017de59740834e1bff59fb11108d7ab9caa510089a715d
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+                    |
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀- BLOCO 2 -⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+Proprietário: james
+Movimentação: 5
+Depósito Inicial: 10
+Tipo da Movimentação: Depósito
+Criado em: 2025-11-13T15:34:44.651705
+Hash Atual: 29b4adecdb94781155a3ef5a3c4c9c7d4cae578a2d48c3caac0a6128178b6a07
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+                    |
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀- BLOCO 3 -⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+Proprietário: james
+Movimentação: -1
+Depósito Inicial: 10
+Tipo da Movimentação: Saque
+Criado em: 2025-11-13T15:34:54.539724
+Hash Atual: 0f3bf00422f2b6b36f69da32bfbebaca6a0395736089bdbd2ba8480837f4e747
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+                    |
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀- BLOCO 4 -⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+Proprietário: james
+Movimentação: -10
+Depósito Inicial: 10
+Tipo da Movimentação: Saque
+Criado em: 2025-11-13T15:35:01.003844
+Hash Atual: a142591846020a9d82a7993bcbd0f14d15b891ff44e7ff84b1cb0dd9fcef40ba
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+
+💰 Saldo Atual: 4 Minicoins
+
+🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙
+
+2025-11-13 15:36:24,187 - INFO - Escolha do cliente james: 3
+2025-11-13 15:36:25,660 - WARNING - Cliente james não tem saldo suficiente para a operação.
+2025-11-13 15:36:25,660 - INFO - Estado atual da blockchain impresso no servidor:
+ 🪙 == 🪙 == 🪙 == 🪙 == BLOCKCHAIN == 🪙 == 🪙 == 🪙 == 🪙
+
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀- BLOCO 1 -⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+Proprietário: james
+Movimentação: 0
+Depósito Inicial: 10
+Tipo da Movimentação: Primeiro Depósito
+Criado em: 2025-11-13T15:34:33.963539
+Hash Atual: e7b76e262994432911017de59740834e1bff59fb11108d7ab9caa510089a715d
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+                    |
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀- BLOCO 2 -⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+Proprietário: james
+Movimentação: 5
+Depósito Inicial: 10
+Tipo da Movimentação: Depósito
+Criado em: 2025-11-13T15:34:44.651705
+Hash Atual: 29b4adecdb94781155a3ef5a3c4c9c7d4cae578a2d48c3caac0a6128178b6a07
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+                    |
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀- BLOCO 3 -⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+Proprietário: james
+Movimentação: -1
+Depósito Inicial: 10
+Tipo da Movimentação: Saque
+Criado em: 2025-11-13T15:34:54.539724
+Hash Atual: 0f3bf00422f2b6b36f69da32bfbebaca6a0395736089bdbd2ba8480837f4e747
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+                    |
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀- BLOCO 4 -⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+Proprietário: james
+Movimentação: -10
+Depósito Inicial: 10
+Tipo da Movimentação: Saque
+Criado em: 2025-11-13T15:35:01.003844
+Hash Atual: a142591846020a9d82a7993bcbd0f14d15b891ff44e7ff84b1cb0dd9fcef40ba
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+
+💰 Saldo Atual: 4 Minicoins
+
+🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙
+
+2025-11-13 15:37:00,988 - INFO - Escolha do cliente james: 5
+2025-11-13 15:37:00,988 - INFO - Enviado aviso de opção inválida ao cliente.
+2025-11-13 15:37:00,988 - INFO - Estado atual da blockchain impresso no servidor:
+ 🪙 == 🪙 == 🪙 == 🪙 == BLOCKCHAIN == 🪙 == 🪙 == 🪙 == 🪙
+
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀- BLOCO 1 -⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+Proprietário: james
+Movimentação: 0
+Depósito Inicial: 10
+Tipo da Movimentação: Primeiro Depósito
+Criado em: 2025-11-13T15:34:33.963539
+Hash Atual: e7b76e262994432911017de59740834e1bff59fb11108d7ab9caa510089a715d
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+                    |
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀- BLOCO 2 -⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+Proprietário: james
+Movimentação: 5
+Depósito Inicial: 10
+Tipo da Movimentação: Depósito
+Criado em: 2025-11-13T15:34:44.651705
+Hash Atual: 29b4adecdb94781155a3ef5a3c4c9c7d4cae578a2d48c3caac0a6128178b6a07
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+                    |
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀- BLOCO 3 -⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+Proprietário: james
+Movimentação: -1
+Depósito Inicial: 10
+Tipo da Movimentação: Saque
+Criado em: 2025-11-13T15:34:54.539724
+Hash Atual: 0f3bf00422f2b6b36f69da32bfbebaca6a0395736089bdbd2ba8480837f4e747
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+                    |
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀- BLOCO 4 -⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+Proprietário: james
+Movimentação: -10
+Depósito Inicial: 10
+Tipo da Movimentação: Saque
+Criado em: 2025-11-13T15:35:01.003844
+Hash Atual: a142591846020a9d82a7993bcbd0f14d15b891ff44e7ff84b1cb0dd9fcef40ba
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+
+💰 Saldo Atual: 4 Minicoins
+
+🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙
+
+2025-11-13 15:37:29,291 - INFO - Escolha do cliente james: 1
+2025-11-13 15:37:29,292 - INFO - Saldo do cliente james foi exibido.
+2025-11-13 15:37:29,292 - INFO - Estado atual da blockchain impresso no servidor:
+ 🪙 == 🪙 == 🪙 == 🪙 == BLOCKCHAIN == 🪙 == 🪙 == 🪙 == 🪙
+
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀- BLOCO 1 -⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+Proprietário: james
+Movimentação: 0
+Depósito Inicial: 10
+Tipo da Movimentação: Primeiro Depósito
+Criado em: 2025-11-13T15:34:33.963539
+Hash Atual: e7b76e262994432911017de59740834e1bff59fb11108d7ab9caa510089a715d
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+                    |
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀- BLOCO 2 -⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+Proprietário: james
+Movimentação: 5
+Depósito Inicial: 10
+Tipo da Movimentação: Depósito
+Criado em: 2025-11-13T15:34:44.651705
+Hash Atual: 29b4adecdb94781155a3ef5a3c4c9c7d4cae578a2d48c3caac0a6128178b6a07
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+                    |
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀- BLOCO 3 -⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+Proprietário: james
+Movimentação: -1
+Depósito Inicial: 10
+Tipo da Movimentação: Saque
+Criado em: 2025-11-13T15:34:54.539724
+Hash Atual: 0f3bf00422f2b6b36f69da32bfbebaca6a0395736089bdbd2ba8480837f4e747
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+                    |
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀- BLOCO 4 -⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+Proprietário: james
+Movimentação: -10
+Depósito Inicial: 10
+Tipo da Movimentação: Saque
+Criado em: 2025-11-13T15:35:01.003844
+Hash Atual: a142591846020a9d82a7993bcbd0f14d15b891ff44e7ff84b1cb0dd9fcef40ba
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+
+💰 Saldo Atual: 4 Minicoins
+
+🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙
+
+2025-11-13 15:37:45,868 - INFO - Escolha do cliente james: 3
+2025-11-13 15:37:47,276 - INFO - Confirmação de saque enviada ao cliente james.
+2025-11-13 15:37:47,277 - INFO - Estado atual da blockchain impresso no servidor:
+ 🪙 == 🪙 == 🪙 == 🪙 == BLOCKCHAIN == 🪙 == 🪙 == 🪙 == 🪙
+
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀- BLOCO 1 -⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+Proprietário: james
+Movimentação: 0
+Depósito Inicial: 10
+Tipo da Movimentação: Primeiro Depósito
+Criado em: 2025-11-13T15:34:33.963539
+Hash Atual: e7b76e262994432911017de59740834e1bff59fb11108d7ab9caa510089a715d
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+                    |
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀- BLOCO 2 -⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+Proprietário: james
+Movimentação: 5
+Depósito Inicial: 10
+Tipo da Movimentação: Depósito
+Criado em: 2025-11-13T15:34:44.651705
+Hash Atual: 29b4adecdb94781155a3ef5a3c4c9c7d4cae578a2d48c3caac0a6128178b6a07
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+                    |
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀- BLOCO 3 -⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+Proprietário: james
+Movimentação: -1
+Depósito Inicial: 10
+Tipo da Movimentação: Saque
+Criado em: 2025-11-13T15:34:54.539724
+Hash Atual: 0f3bf00422f2b6b36f69da32bfbebaca6a0395736089bdbd2ba8480837f4e747
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+                    |
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀- BLOCO 4 -⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+Proprietário: james
+Movimentação: -10
+Depósito Inicial: 10
+Tipo da Movimentação: Saque
+Criado em: 2025-11-13T15:35:01.003844
+Hash Atual: a142591846020a9d82a7993bcbd0f14d15b891ff44e7ff84b1cb0dd9fcef40ba
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+                    |
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀- BLOCO 5 -⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+Proprietário: james
+Movimentação: -4
+Depósito Inicial: 10
+Tipo da Movimentação: Saque
+Criado em: 2025-11-13T15:37:47.276167
+Hash Atual: 99b076bdad360b3e4aecbbc167539815eb7fde0b2980588010c3a529c3d4ac2f
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+
+💰 Saldo Atual: 0 Minicoins
+
+🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙
+
+2025-11-13 15:37:48,427 - INFO - Escolha do cliente james: 1
+2025-11-13 15:37:48,428 - INFO - Saldo do cliente james foi exibido.
+2025-11-13 15:37:48,428 - INFO - Estado atual da blockchain impresso no servidor:
+ 🪙 == 🪙 == 🪙 == 🪙 == BLOCKCHAIN == 🪙 == 🪙 == 🪙 == 🪙
+
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀- BLOCO 1 -⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+Proprietário: james
+Movimentação: 0
+Depósito Inicial: 10
+Tipo da Movimentação: Primeiro Depósito
+Criado em: 2025-11-13T15:34:33.963539
+Hash Atual: e7b76e262994432911017de59740834e1bff59fb11108d7ab9caa510089a715d
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+                    |
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀- BLOCO 2 -⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+Proprietário: james
+Movimentação: 5
+Depósito Inicial: 10
+Tipo da Movimentação: Depósito
+Criado em: 2025-11-13T15:34:44.651705
+Hash Atual: 29b4adecdb94781155a3ef5a3c4c9c7d4cae578a2d48c3caac0a6128178b6a07
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+                    |
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀- BLOCO 3 -⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+Proprietário: james
+Movimentação: -1
+Depósito Inicial: 10
+Tipo da Movimentação: Saque
+Criado em: 2025-11-13T15:34:54.539724
+Hash Atual: 0f3bf00422f2b6b36f69da32bfbebaca6a0395736089bdbd2ba8480837f4e747
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+                    |
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀- BLOCO 4 -⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+Proprietário: james
+Movimentação: -10
+Depósito Inicial: 10
+Tipo da Movimentação: Saque
+Criado em: 2025-11-13T15:35:01.003844
+Hash Atual: a142591846020a9d82a7993bcbd0f14d15b891ff44e7ff84b1cb0dd9fcef40ba
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+                    |
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀- BLOCO 5 -⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+Proprietário: james
+Movimentação: -4
+Depósito Inicial: 10
+Tipo da Movimentação: Saque
+Criado em: 2025-11-13T15:37:47.276167
+Hash Atual: 99b076bdad360b3e4aecbbc167539815eb7fde0b2980588010c3a529c3d4ac2f
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+
+💰 Saldo Atual: 0 Minicoins
+
+🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙
+
+2025-11-13 15:37:51,691 - INFO - Escolha do cliente james: 2
+2025-11-13 15:37:53,340 - INFO - Confirmação de depósito enviada ao cliente james.
+2025-11-13 15:37:53,340 - INFO - Estado atual da blockchain impresso no servidor:
+ 🪙 == 🪙 == 🪙 == 🪙 == BLOCKCHAIN == 🪙 == 🪙 == 🪙 == 🪙
+
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀- BLOCO 1 -⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+Proprietário: james
+Movimentação: 0
+Depósito Inicial: 10
+Tipo da Movimentação: Primeiro Depósito
+Criado em: 2025-11-13T15:34:33.963539
+Hash Atual: e7b76e262994432911017de59740834e1bff59fb11108d7ab9caa510089a715d
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+                    |
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀- BLOCO 2 -⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+Proprietário: james
+Movimentação: 5
+Depósito Inicial: 10
+Tipo da Movimentação: Depósito
+Criado em: 2025-11-13T15:34:44.651705
+Hash Atual: 29b4adecdb94781155a3ef5a3c4c9c7d4cae578a2d48c3caac0a6128178b6a07
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+                    |
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀- BLOCO 3 -⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+Proprietário: james
+Movimentação: -1
+Depósito Inicial: 10
+Tipo da Movimentação: Saque
+Criado em: 2025-11-13T15:34:54.539724
+Hash Atual: 0f3bf00422f2b6b36f69da32bfbebaca6a0395736089bdbd2ba8480837f4e747
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+                    |
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀- BLOCO 4 -⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+Proprietário: james
+Movimentação: -10
+Depósito Inicial: 10
+Tipo da Movimentação: Saque
+Criado em: 2025-11-13T15:35:01.003844
+Hash Atual: a142591846020a9d82a7993bcbd0f14d15b891ff44e7ff84b1cb0dd9fcef40ba
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+                    |
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀- BLOCO 5 -⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+Proprietário: james
+Movimentação: -4
+Depósito Inicial: 10
+Tipo da Movimentação: Saque
+Criado em: 2025-11-13T15:37:47.276167
+Hash Atual: 99b076bdad360b3e4aecbbc167539815eb7fde0b2980588010c3a529c3d4ac2f
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+                    |
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀- BLOCO 6 -⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+Proprietário: james
+Movimentação: 9
+Depósito Inicial: 10
+Tipo da Movimentação: Depósito
+Criado em: 2025-11-13T15:37:53.339925
+Hash Atual: 4fdec5aa3c8e3618b6ffb4b5855f42dca86fb967af47e788a63fb4105dc74b3a
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+
+💰 Saldo Atual: 9 Minicoins
+
+🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙
+
+2025-11-13 15:37:55,019 - INFO - Escolha do cliente james: 4
+2025-11-13 15:37:55,020 - INFO - Cliente saiu do banco.
+2025-11-13 15:37:55,020 - INFO - Socket agora está em modo de escuta.

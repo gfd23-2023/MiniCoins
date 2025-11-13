@@ -28,7 +28,7 @@ sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 logger.info("Socket criado com sucesso.")
 
 # vincula o socket à porta 
-sock.bind((ip_servidor, porta))  #casa
+sock.bind((ip_servidor, porta))
 logger.info(f"Socket vinculado à porta {porta}.") 
 
 banco = Banco()  # cria uma instância do Banco
@@ -61,7 +61,7 @@ while True:
     logger.info(f"Dados recebidos do cliente: {data.decode()}")
 
     if data.decode().upper() == 'S':
-        logger.info("Cliente optou por criar uma conta.")
+        logger.info("Cliente entrou no Banco Central das Minicoins.")
         print(banco.criou_conta())
 
         mensagem = "Digite seu nome: "
@@ -75,20 +75,28 @@ while True:
 
         conexao = True
         while conexao:
+
+            # imprime no servidor o estado atual da blockchain
+            print(bc.impressao())
+            logger.info(f"Estado atual da blockchain impresso no servidor:\n {bc.impressao()}")
+
+
             data = conn.recv(1024)  # recebe a escolha do cliente
             escolha = data.decode()
-            logger.info(f"Escolha do cliente: {escolha}")
+            logger.info(f"Escolha do cliente {nome}: {escolha}")
 
+            # opcao de ver saldo ---------------------------------------------------
             if escolha == '1':
                 saldo = bc.retorna_saldo()
-                resposta = "Seu saldo é de {} Minicoins.".format(saldo)
+                resposta = banco.saldo_cliente(saldo)
                 conn.send(resposta.encode()+banco.menu().encode())
-                logger.info("Enviado saldo ao cliente.")
+                logger.info(f"Saldo do cliente {nome} foi exibido.")
                 print(banco.viu_saldo())
 
 
+            # opcao de deposito ----------------------------------------------------
             elif escolha == '2':
-                mensagem = "Digite o valor que deseja depositar: "
+                mensagem = banco.solicita_deposito()
                 conn.send(mensagem.encode())
                 data2 = conn.recv(1024)
                 movimentacao = data2.decode()
@@ -96,38 +104,42 @@ while True:
                 if (bc.numero_movimentacoes() == 0):
                     #Depósito inicial
                     bloco = MiniCoin()
-                    bloco.criar_movimentacao(0, nome, bc.numero_movimentacoes(), int(movimentacao), 0)
+                    bloco.criar_movimentacao(0, nome, int(movimentacao), 0)
                     bc.inserir_bloco(bloco)
                 else:
                     novo_bloco = MiniCoin()
-                    novo_bloco.criar_movimentacao(int(movimentacao), nome, bc.numero_movimentacoes(), bc.deposito_inicial(), bc.ultimo_hash())
+                    novo_bloco.criar_movimentacao(int(movimentacao), nome, bc.deposito_inicial(), bc.ultimo_hash())
                     bc.inserir_bloco(novo_bloco)
                 
-                resposta = "Depósito realizado com sucesso."
-                conn.send(resposta.encode()+banco.menu().encode())
-                logger.info("Confirmação de depósito enviada ao cliente.")
+                mensagem = banco.deposito_sucesso()
+                conn.send(mensagem.encode()+banco.menu().encode())
+                logger.info(f"Confirmação de depósito enviada ao cliente {nome}.")
                 print(banco.fez_deposito())
 
 
+            # opcao de saque -------------------------------------------------------
             elif escolha == '3':
-                mensagem = "Digite o valor que deseja retirar: "
+                mensagem = banco.solicita_saque()
                 conn.send(mensagem.encode())
                 data2 = conn.recv(1024)
                 movimentacao = data2.decode()
 
                 if int(movimentacao) > bc.retorna_saldo():
-                    resposta = "Saldo insuficiente!"
-                    conn.send(resposta.encode()+banco.menu().encode())
+                    mensagem = banco.saldo_insuficiente()
+                    conn.send(mensagem.encode()+banco.menu().encode())
+                    logger.warning(f"Cliente {nome} não tem saldo suficiente para a operação.")
+                    print(banco.saldo_insuficiente())
                 else:
                     novo_bloco = MiniCoin()
-                    novo_bloco.criar_movimentacao(-int(movimentacao), nome, bc.numero_movimentacoes(), bc.deposito_inicial(), bc.ultimo_hash())
+                    novo_bloco.criar_movimentacao(-int(movimentacao), nome, bc.deposito_inicial(), bc.ultimo_hash())
                     bc.inserir_bloco(novo_bloco)
-                    resposta = "Saque realizado com sucesso."
-                    conn.send(resposta.encode()+banco.menu().encode())
-                    logger.info("Confirmação de saque enviada ao cliente.")
+                    mensagem = banco.saque_sucesso()
+                    conn.send(mensagem.encode()+banco.menu().encode())
+                    logger.info(f"Confirmação de saque enviada ao cliente {nome}.")
                     print(banco.fez_saque())
 
 
+            # opcao de sair do banco ------------------------------------------------
             elif escolha == '4':
                 resposta = "Saindo do banco. Até logo!"
                 conn.send(resposta.encode())
@@ -136,14 +148,15 @@ while True:
                 print(banco.encerra_conexao())
 
 
+            # escolha de opcao invalida do cliente ---------------------------------
             else:
-                resposta = "Opção inválida. Tente novamente."
-                conn.send(resposta.encode()+banco.menu().encode())
+                mensagem = banco.opcao_invalida()
+                conn.send(mensagem.encode()+banco.menu().encode())
                 logger.info("Enviado aviso de opção inválida ao cliente.")
                 print(banco.opcao_invalida())
 
     else:
-        logger.info("Cliente optou por não criar uma conta. Encerrando conexão.")     
+        logger.info("Cliente optou por não entrar na conta. Encerrando conexão.")
         print(banco.nao_criou_conta())
         conn.close() # fecha a conexão
         logger.info(f"Conexão com {addr} fechada.")

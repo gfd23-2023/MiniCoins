@@ -124,26 +124,35 @@ class blockchain:
         return self.head.deposito_inicial
 
     #Função para imprimir a blockchain
-    def imprime(self):
+    def impressao(self):
 
         #Moedas
         bloco = self.head
 
-        print('----------- Blockchain Inteira: ')
+        desenho = '🪙 == 🪙 == 🪙 == 🪙 == BLOCKCHAIN == 🪙 == 🪙 == 🪙 == 🪙\n\n'
 
         if (self.numero_blocos == 0):
-            print ('Nenhuma Movimentação')
-            return
+            desenho += 'Nenhuma Movimentação\n\n'
+            desenho += '🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙\n'
+            return desenho
 
         i = 1
         while bloco is not None:
-            print(f'======== BLOCO {i} ========')
-            print('Proprietário: ', {bloco.proprietario})
-            print('Movimentação: ', {bloco.movimentacao})
-            print('Depósito Inicial: ', {bloco.deposito_inicial})
-            print('Tipo da Movimentação: ', {bloco.movimentacao_tipo})
-            print('Saldo Atual: ', {self.retorna_saldo()})
-            print('==========================')
+            if (i != 1):
+                desenho += '                    |\n'
+            desenho += f'⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀- BLOCO {i} -⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀\n'
+            desenho += f'Proprietário: {bloco.proprietario}\n'
+            desenho += f'Movimentação: {bloco.movimentacao}\n'
+            desenho += f'Depósito Inicial: {bloco.deposito_inicial}\n'
+            desenho += f'Tipo da Movimentação: {bloco.movimentacao_tipo}\n'
+            desenho += f'Criado em: {bloco.criado_em}\n'
+            desenho += f'Hash Atual: {bloco.hash_atual}\n'
+            desenho += '⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀\n'
             i += 1
 
             bloco = bloco.prox
+
+        desenho += '\n💰 Saldo Atual: {} Minicoins\n\n'.format(self.retorna_saldo())
+        desenho += '🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙 == 🪙\n'
+
+        return desenho
