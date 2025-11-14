@@ -342,7 +342,10 @@ code {
 
 /* for inline code */
 :not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
+	color: #6e53b3; /* Change the old color so it seems less like an error */
+	background-color: #f3edff;
+	padding: 2px;
+	border-radius: 5px;
 	font-size: inherit;
 }
 
@@ -393,13 +396,14 @@ code {
 <li>Execução</li>
 </ol>
 <h2 id="arquivos">Arquivos</h2>
-<a href="cliente.py.txt">cliente.py.txt</a>: Programa que implementa o cliente do banco MiniCoins.<br>
-<a href="servidor.py.txt">servidor.py.txt</a>: Programa que implementa o servidor do banco MiniCoins.<br>
-<a href="banco.py.txt">banco.py.txt</a>: Classe auxiliar que implementa as mensagens trocadas entre o cliente e o servidor.<br>
-<a href="minicoin.py.txt">minicoin.py.txt</a>: Classe que implementa o bloco da blockchain.<br>
-<a href="blockchain.py.txt">blockchain.py.txt</a>: Classe que implementa a lista ligada que representa a blockchain.<br>
-<a href="cliente.log">cliente.log</a>: Arquivo de log do cliente.<br>
-<a href="servidor.log">servidor.log</a>: Arquivo de log
+<a href="arquivos-entrega/cliente.py.txt">cliente.py.txt</a>: Programa que implementa o cliente do banco MiniCoins.<br>
+<a href="arquivos-entrega/servidor.py.txt">servidor.py.txt</a>: Programa que implementa o servidor do banco MiniCoins.<br>
+<a href="arquivos-entrega/banco.py.txt">banco.py.txt</a>: Classe auxiliar que implementa as mensagens trocadas entre o cliente e o servidor.<br>
+<a href="arquivos-entrega/minicoin.py.txt">minicoin.py.txt</a>: Classe que implementa o bloco da blockchain.<br>
+<a href="arquivos-entrega/blockchain.py.txt">blockchain.py.txt</a>: Classe que implementa a lista ligada que representa a blockchain.<br>
+<a href="arquivos-entrega/cliente.log">cliente.log</a>: Arquivo de log do cliente.<br>
+<a href="arquivos-entrega/servidor.log">servidor.log</a>: Arquivo de log
+<hr>
 <h2 id="1-in%C3%ADcio-da-implementa%C3%A7%C3%A3o-%F0%9F%8C%90">1. Início da Implementação 🌐</h2>
 <p>Após a escolha da linguagem, foi dado início ao desenvolvimento do trabalho que se deu pela implementação da lista ligada - base da blockchain - e da estrutura cliente-servidor. Enquanto isso, foi possível pesquisar e entender mais sobre a definição de <code>blockchains</code> e como utilizar o <code>hash</code>.</p>
 <p>O desenvolvimento do trabalho teve por início a implementação da lista ligada que representa a Blockchain. Para isso, foram definidas duas classes: <code>MiniCoins</code> e <code>blockchain</code>.</p>
@@ -502,12 +506,51 @@ code {
 <p>Implementar a &quot;conversa&quot; entre o cliente e o servidor foi uma tarefa mais simples do que o esperado.<br>
 Nesse contexto, o servidor - além de enviar as opções ao cliente - mantém a blockchain e é nele que as funções são chamadas. Um detalhe a ressaltar é que o saldo da conta do usuário não é guardado na estrutura, mas sim calculado ao percorrer toda a blockchain quando o método é chamado.</p>
 <h3 id="31-mensagens-de-log">3.1 Mensagens de Log</h3>
-<p>Todas as ações do servidor, bem como as escolhas do cliente, são documentadas nos arquivos <code>servidor.log</code> e <code>cliente.log</code>. As mensagens são geradas pela biblioteca <code>logging</code>, presente tanto em <code>servidor.py</code> quanto <code>cliente.py</code>.</p>
+<p>Todas as ações do servidor, bem como as escolhas do cliente, são documentadas nos arquivos <code>servidor.log</code> e <code>cliente.log</code>. As mensagens são geradas pela biblioteca <code>logging</code>, presente tanto em <code>servidor.py</code> quanto <code>cliente.py</code>. Os logs registram as informações de conexão e também uma representação da blockchain. Infelizmente, ao visualizar os arquivos logs em <code>.txt</code>, não é possivel ver os emojis que usamos para uma visualização mais divertida. Aqui esta um exemplo de um recorte do log do servidor:</p>
+<pre class="hljs"><code><div>2025-11-13 21:30:10,662 - INFO - Escolha do cliente james: 3
+2025-11-13 21:30:12,374 - INFO - Confirmação de saque enviada ao cliente james.
+2025-11-13 21:30:12,374 - INFO - Estado atual da blockchain impresso no servidor:
+ ⛁ == ⛁ == ⛁ == ⛁ == BLOCKCHAIN == ⛁ == ⛁ == ⛁ == ⛁
+
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀- BLOCO 1 -⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+| Proprietário: james
+| Movimentação: 0
+| Depósito Inicial: 100
+| Tipo da Movimentação: Primeiro Depósito
+| Criado em: 2025-11-13T21:29:53.998306
+| Hash Atual: d8420622bd2d8f83ce9ed7570be571f531c4adcf7ba7a0936187c052c9c3b387
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+                    |
+                    |
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀- BLOCO 2 -⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+| Proprietário: james
+| Movimentação: -73
+| Depósito Inicial: 100
+| Tipo da Movimentação: Saque
+| Criado em: 2025-11-13T21:30:04.726579
+| Hash Atual: 6daaeb0d873e955d093387fbd9800b05d26316a050b9871ee4505fc3902d0d1d
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+                    |
+                    |
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀- BLOCO 3 -⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+| Proprietário: james
+| Movimentação: -20
+| Depósito Inicial: 100
+| Tipo da Movimentação: Saque
+| Criado em: 2025-11-13T21:30:12.374651
+| Hash Atual: 10ce0db11bbff69caaceab226dea811b8ae0a8a1be8ca9f597faacbd13f79af0
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+
+💰 Saldo Atual: 7 Minicoins
+
+⛁ == ⛁ == ⛁ == ⛁ == ⛁ == ⛁ == ⛁ == ⛁ == ⛁ == ⛁ == ⛁
+</div></code></pre>
 <h3 id="pequenos-probelmas-durante-a-implementa%C3%A7%C3%A3o">Pequenos Probelmas Durante a Implementação</h3>
 <p>Alguns problemas foram enfrentados durante essa etapa, a maioria deles foi consequência de desatenção com os nomes das variáveis e com os atributos das classes.</p>
 <ol>
 <li><strong>Cálculo do saldo</strong>: O cálculo do saldo sempre retornava o mesmo valor do depósito inicial. Isso acontecia porque na linha de incrementar o saldo, a variável estava errada. Era para acumular &quot;saldo + movimentação&quot; e o que estava escrito era <code>saldo += saldo</code>.</li>
 <li><strong>Uma confusão</strong>: Antes de chamar as funções da blockchain no servidor, foi um pouco confuso entender como a linguagem Python lida com a arquitetura cliente-servidor. Era suspeitosamente simples. Depois de entendido, foi bem simples o funcionamento.</li>
+<li><strong>Valores Inesperados:</strong> Ao inserir <strong>valores negativos</strong> na entrada, o programa fazia uma operação inversa por conta do sinal. Então se era feito um depósito de MiniCoins negativas, ele perdia moedas e se ele fazia um saque de MiniCoins negativas, ele ganhava moedas. Para resolver isso, bastou adicionar uma condição verificando a entrada do cliente.</li>
 </ol>
 <h2 id="4-execu%C3%A7%C3%A3o-%F0%9F%A4%96">4. Execução 🤖</h2>
 <p>Para executar o programa, é preciso ter o endereço IP do servidor e a porta. Executamos assim:</p>

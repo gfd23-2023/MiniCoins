@@ -16,6 +16,7 @@
 
 ## Arquivos
 
+---
 
 ## 1. Início da Implementação 🌐
 Após a escolha da linguagem, foi dado início ao desenvolvimento do trabalho que se deu pela implementação da lista ligada - base da blockchain - e da estrutura cliente-servidor. Enquanto isso, foi possível pesquisar e entender mais sobre a definição de `blockchains` e como utilizar o `hash`.
@@ -144,12 +145,53 @@ Nesse contexto, o servidor - além de enviar as opções ao cliente - mantém a 
 
 ### 3.1 Mensagens de Log
 
-Todas as ações do servidor, bem como as escolhas do cliente, são documentadas nos arquivos `servidor.log`e `cliente.log`. As mensagens são geradas pela biblioteca `logging`, presente tanto em `servidor.py` quanto `cliente.py`.
+Todas as ações do servidor, bem como as escolhas do cliente, são documentadas nos arquivos `servidor.log`e `cliente.log`. As mensagens são geradas pela biblioteca `logging`, presente tanto em `servidor.py` quanto `cliente.py`. Os logs registram as informações de conexão e também uma representação da blockchain. Infelizmente, ao visualizar os arquivos logs em `.txt`, não é possivel ver os emojis que usamos para uma visualização mais divertida. Aqui esta um exemplo de um recorte do log do servidor:
+
+```log
+2025-11-13 21:30:10,662 - INFO - Escolha do cliente james: 3
+2025-11-13 21:30:12,374 - INFO - Confirmação de saque enviada ao cliente james.
+2025-11-13 21:30:12,374 - INFO - Estado atual da blockchain impresso no servidor:
+ ⛁ == ⛁ == ⛁ == ⛁ == BLOCKCHAIN == ⛁ == ⛁ == ⛁ == ⛁
+
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀- BLOCO 1 -⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+| Proprietário: james
+| Movimentação: 0
+| Depósito Inicial: 100
+| Tipo da Movimentação: Primeiro Depósito
+| Criado em: 2025-11-13T21:29:53.998306
+| Hash Atual: d8420622bd2d8f83ce9ed7570be571f531c4adcf7ba7a0936187c052c9c3b387
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+                    |
+                    |
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀- BLOCO 2 -⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+| Proprietário: james
+| Movimentação: -73
+| Depósito Inicial: 100
+| Tipo da Movimentação: Saque
+| Criado em: 2025-11-13T21:30:04.726579
+| Hash Atual: 6daaeb0d873e955d093387fbd9800b05d26316a050b9871ee4505fc3902d0d1d
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+                    |
+                    |
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀- BLOCO 3 -⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+| Proprietário: james
+| Movimentação: -20
+| Depósito Inicial: 100
+| Tipo da Movimentação: Saque
+| Criado em: 2025-11-13T21:30:12.374651
+| Hash Atual: 10ce0db11bbff69caaceab226dea811b8ae0a8a1be8ca9f597faacbd13f79af0
+⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀-⛀
+
+💰 Saldo Atual: 7 Minicoins
+
+⛁ == ⛁ == ⛁ == ⛁ == ⛁ == ⛁ == ⛁ == ⛁ == ⛁ == ⛁ == ⛁
+```
 
 ### Pequenos Probelmas Durante a Implementação
 Alguns problemas foram enfrentados durante essa etapa, a maioria deles foi consequência de desatenção com os nomes das variáveis e com os atributos das classes.
 1. **Cálculo do saldo**: O cálculo do saldo sempre retornava o mesmo valor do depósito inicial. Isso acontecia porque na linha de incrementar o saldo, a variável estava errada. Era para acumular "saldo + movimentação" e o que estava escrito era `saldo += saldo`.
 2. **Uma confusão**: Antes de chamar as funções da blockchain no servidor, foi um pouco confuso entender como a linguagem Python lida com a arquitetura cliente-servidor. Era suspeitosamente simples. Depois de entendido, foi bem simples o funcionamento.
+3. **Valores Inesperados:** Ao inserir **valores negativos** na entrada, o programa fazia uma operação inversa por conta do sinal. Então se era feito um depósito de MiniCoins negativas, ele perdia moedas e se ele fazia um saque de MiniCoins negativas, ele ganhava moedas. Para resolver isso, bastou adicionar uma condição verificando a entrada do cliente.
 
 ## 4. Execução 🤖
 
